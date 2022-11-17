@@ -1,0 +1,236 @@
+local cannongui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local dlabel = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
+local dbutton = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+
+cannongui.Name = "cannongui"
+cannongui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+cannongui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+cannongui.ResetOnSpawn = false
+
+TextButton.Parent = cannongui
+TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+TextButton.Position = UDim2.new(0, 11, 0, 584)
+TextButton.Size = UDim2.new(0, 108, 0, 28)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Close"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner.Parent = TextButton
+
+Frame.Parent = cannongui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.Position = UDim2.new(0, 677, 0, 225)
+Frame.Size = UDim2.new(0, 264, 0, 204)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Frame_2.Position = UDim2.new(0, 2, 0, 2)
+Frame_2.Size = UDim2.new(0, 260, 0, 200)
+
+UICorner_2.Parent = Frame_2
+
+TextBox.Parent = Frame_2
+TextBox.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextBox.Position = UDim2.new(0.11240305, 0, 0.289340049, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 42)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_3.Parent = TextBox
+
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.0456852801, 0)
+TextLabel.Size = UDim2.new(0, 258, 0, 41)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Num of cannons:"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_4.Parent = TextLabel
+
+TextButton_2.Parent = Frame_2
+TextButton_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_2.Position = UDim2.new(0.112403102, 0, 0.539060891, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Buy"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_5.Parent = TextButton_2
+
+dlabel.Name = "dlabel"
+dlabel.Parent = Frame_2
+dlabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dlabel.BackgroundTransparency = 1.000
+dlabel.Position = UDim2.new(0.111538462, 0, 0.839999974, 0)
+dlabel.Size = UDim2.new(0, 100, 0, 25)
+dlabel.Font = Enum.Font.SourceSans
+dlabel.Text = "Clear Animation:"
+dlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+dlabel.TextScaled = true
+dlabel.TextSize = 14.000
+dlabel.TextWrapped = true
+
+UICorner_6.Parent = dlabel
+
+UICorner_7.Parent = Frame
+
+dbutton.Name = "dbutton"
+dbutton.Parent = Frame
+dbutton.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+dbutton.Position = UDim2.new(0.532857716, 0, 0.83317852, 0)
+dbutton.Size = UDim2.new(0, 90, 0, 25)
+dbutton.Font = Enum.Font.SourceSans
+dbutton.Text = "False"
+dbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+dbutton.TextScaled = true
+dbutton.TextSize = 14.000
+dbutton.TextWrapped = true
+
+UICorner_8.Parent = dbutton
+
+-- Scripts:
+
+local function JVMJVQ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+	if script.Parent.Text == "Open" then
+		script.Parent.Text = "Close"
+		script.Parent.Parent.Frame.Visible = true
+	else
+		script.Parent.Text = "Open"
+		script.Parent.Parent.Frame.Visible = false
+		
+		end
+		end)
+end
+coroutine.wrap(JVMJVQ_fake_script)()
+local function HVFIHRD_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local Humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+	script.Parent.MouseButton1Down:connect(function()
+	for i = 1, tonumber(script.Parent.Parent.TextBox.Text),1 do
+		local args = {
+			[1] = "Cannon",
+			[2] = 1
+		}
+	
+		workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+		end
+		if script.Parent.Parent.Parent.dbutton.Text == "True" then
+		wait(1.5)
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0	
+		end
+	end)
+end
+coroutine.wrap(HVFIHRD_fake_script)()
+local function BQDYHXS_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+end
+coroutine.wrap(BQDYHXS_fake_script)()
+local function ELTQ_fake_script() -- dbutton.LocalScript 
+	local script = Instance.new('LocalScript', dbutton)
+
+	
+	script.Parent.MouseButton1Down:connect(function()
+		if script.Parent.Text == "True" then
+			script.Parent.Text = "False"
+		else
+			script.Parent.Text = "True"
+		end
+	end)
+end
+coroutine.wrap(ELTQ_fake_script)()
