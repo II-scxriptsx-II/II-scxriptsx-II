@@ -1,236 +1,3980 @@
-local cannongui = Instance.new("ScreenGui")
-local TextButton = Instance.new("TextButton")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AstraHub = Instance.new("ScreenGui")
+local MainRgbFrame = Instance.new("Frame")
+local MainContainer = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
-local Frame = Instance.new("Frame")
-local Frame_2 = Instance.new("Frame")
+local SideBar = Instance.new("ImageLabel")
 local UICorner_2 = Instance.new("UICorner")
-local TextBox = Instance.new("TextBox")
+local SettingsButton = Instance.new("ImageButton")
+local PlayerButton = Instance.new("ImageButton")
+local AutoBuyButton = Instance.new("ImageButton")
+local TeleportsButton = Instance.new("ImageButton")
+local SearchButton = Instance.new("ImageButton")
+local UIListLayout = Instance.new("UIListLayout")
+local HomeButton = Instance.new("ImageButton")
+local UtilityButton = Instance.new("ImageButton")
+local ChatButton = Instance.new("ImageButton")
+local UtilitiesFrame = Instance.new("ScrollingFrame")
+local rejoinbutton = Instance.new("TextButton")
+local tptoolbutton = Instance.new("TextButton")
+local autofarmbutton = Instance.new("TextButton")
+local redeemcodesbutton = Instance.new("TextButton")
+local easterevent = Instance.new("TextButton")
+local spidybf = Instance.new("TextButton")
+local winterplace = Instance.new("TextButton")
+local eventtp = Instance.new("TextLabel")
+local servhopbutton = Instance.new("TextButton")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local romvedquests = Instance.new("TextLabel")
+local fabbyquest = Instance.new("TextButton")
+local gingfight = Instance.new("TextButton")
+local invasion = Instance.new("TextButton")
+local eventtp_2 = Instance.new("TextLabel")
+local tpbuilds = Instance.new("TextButton")
+local PlayerFrame = Instance.new("ScrollingFrame")
+local resetbutton = Instance.new("TextButton")
+local noclipbutton = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
+local walkspeedsliderbar = Instance.new("Frame")
+local sliderbutton = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local TextButton_2 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
-local dlabel = Instance.new("TextLabel")
+local jumppowersliderbar = Instance.new("Frame")
+local sliderbutton_2 = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
 local UICorner_7 = Instance.new("UICorner")
-local dbutton = Instance.new("TextButton")
+local nocliplabel = Instance.new("TextLabel")
+local flylabel = Instance.new("TextLabel")
+local togglefly = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
+local speedlabel = Instance.new("TextLabel")
+local speednum = Instance.new("TextLabel")
+local plus = Instance.new("TextButton")
+local min = Instance.new("TextButton")
+local TeleportsFrame = Instance.new("ScrollingFrame")
+local blueplottpbutton = Instance.new("TextButton")
+local greenplottpbutton = Instance.new("TextButton")
+local blackplottpbutton = Instance.new("TextButton")
+local magentaplottpbutton = Instance.new("TextButton")
+local yellowplottpbutton = Instance.new("TextButton")
+local whiteplottpbutton = Instance.new("TextButton")
+local redplottpbutton = Instance.new("TextButton")
+local AutoBuyFrame = Instance.new("ScrollingFrame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local AutoBuyLabel = Instance.new("TextLabel")
+local BuyButton = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local MinusIcon = Instance.new("ImageButton")
+local PlusIcon = Instance.new("ImageButton")
+local QuantityNumber = Instance.new("TextBox")
+local UICorner_10 = Instance.new("UICorner")
+local BlockSelected = Instance.new("ImageLabel")
+local UICorner_11 = Instance.new("UICorner")
+local Template = Instance.new("TextButton")
+local PriceLabel = Instance.new("TextLabel")
+local SettinsFrame = Instance.new("ScrollingFrame")
+local keybinder = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local kbindchange = Instance.new("TextLabel")
+local disablergb = Instance.new("TextLabel")
+local rgbbutton = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local disabless = Instance.new("TextLabel")
+local soundbutton = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local destroybutton = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local SearchFrame = Instance.new("Frame")
+local playerMenu = Instance.new("Frame")
+local blocks = Instance.new("TextButton")
+local general = Instance.new("TextButton")
+local saves = Instance.new("TextButton")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local alabel = Instance.new("TextLabel")
+local backbutton = Instance.new("ImageButton")
+local playersMenu = Instance.new("Frame")
+local tb = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local al = Instance.new("TextLabel")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local savesMenu = Instance.new("ScrollingFrame")
+local UIGridLayoutSaves = Instance.new("UIGridLayout")
+local blocksMenu = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local generalMenu = Instance.new("ScrollingFrame")
+local bindToolLabel = Instance.new("TextLabel")
+local blockJoinLabel = Instance.new("TextLabel")
+local goldLabel = Instance.new("TextLabel")
+local goldMulLabel = Instance.new("TextLabel")
+local groupRankHiddenLabel = Instance.new("TextLabel")
+local groupRankLabel = Instance.new("TextLabel")
+local haveStarSlotLabel = Instance.new("TextLabel")
+local idkBonusLabel = Instance.new("TextLabel")
+local paintToolLabel = Instance.new("TextLabel")
+local plushie1Label = Instance.new("TextLabel")
+local plushie2Label = Instance.new("TextLabel")
+local plushie3Label = Instance.new("TextLabel")
+local plushie4Label = Instance.new("TextLabel")
+local propertiesToolLabel = Instance.new("TextLabel")
+local pvpEnabledLabel = Instance.new("TextLabel")
+local scaleToolLabel = Instance.new("TextLabel")
+local shareBlocksLabel = Instance.new("TextLabel")
+local shopStyleColorLabel = Instance.new("TextLabel")
+local shopStyleOutlineLabel = Instance.new("TextLabel")
+local shopStyleTransLabel = Instance.new("TextLabel")
+local shopStyleWoodLabel = Instance.new("TextLabel")
+local spiderBossLabel = Instance.new("TextLabel")
+local visitsLabel = Instance.new("TextLabel")
+local zegBossLabel = Instance.new("TextLabel")
+local TNTbonusLabel = Instance.new("TextLabel")
+local UIListLayout_6 = Instance.new("UIListLayout")
+local Slot = Instance.new("ImageButton")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local SlotStarImage = Instance.new("ImageLabel")
+local SlotName = Instance.new("TextLabel")
+local itemTemplate = Instance.new("ImageLabel")
+local itemTemplateName = Instance.new("TextLabel")
+local itemTemplateCount = Instance.new("TextLabel")
+local MainFrame = Instance.new("ScrollingFrame")
+local WelcomeLabel = Instance.new("TextLabel")
+local CreditLabel = Instance.new("TextLabel")
+local JoinServerButton = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local FeaturesLabel = Instance.new("TextLabel")
+local ChatFrame = Instance.new("Frame")
+local ChatHolder = Instance.new("ScrollingFrame")
+local UIListLayout_7 = Instance.new("UIListLayout")
+local ChatModule = Instance.new("Frame")
+local UsernameLabel = Instance.new("TextLabel")
+local TimeLabel = Instance.new("TextLabel")
+local MessageLabel = Instance.new("TextLabel")
+local ProfilePictureHolder = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local ProfilePicture = Instance.new("ImageLabel")
+local UICorner_19 = Instance.new("UICorner")
+local ChatBox = Instance.new("TextBox")
+local Sep = Instance.new("Frame")
+local MaxChars = Instance.new("TextLabel")
+local TitleBar = Instance.new("ImageLabel")
+local HubName = Instance.new("TextLabel")
+local GameTitle = Instance.new("TextLabel")
+local UICorner_20 = Instance.new("UICorner")
+local UICorner_21 = Instance.new("UICorner")
+local KeyFrame = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local Container = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_24 = Instance.new("UICorner")
+local DowntitleLabel = Instance.new("TextLabel")
+local KeyEmoji = Instance.new("ImageButton")
+local LinkvertiseLink = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local LabelContainer = Instance.new("Frame")
+local name = Instance.new("TextLabel")
+local keyreq = Instance.new("TextLabel")
+local UICorner_26 = Instance.new("UICorner")
+local DiscordLink = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local HowToGetKey = Instance.new("TextLabel")
+local HowToGetKey_2 = Instance.new("TextLabel")
 
-cannongui.Name = "cannongui"
-cannongui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-cannongui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-cannongui.ResetOnSpawn = false
+--Properties:
 
-TextButton.Parent = cannongui
-TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-TextButton.Position = UDim2.new(0, 11, 0, 584)
-TextButton.Size = UDim2.new(0, 108, 0, 28)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Close"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
+AstraHub.Name = "AstraHub"
+AstraHub.Parent = game.CoreGui
+AstraHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+AstraHub.ResetOnSpawn = false
 
-UICorner.Parent = TextButton
+MainRgbFrame.Name = "MainRgbFrame"
+MainRgbFrame.Parent = AstraHub
+MainRgbFrame.Active = true
+MainRgbFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainRgbFrame.Position = UDim2.new(0.263829798, 0, 0.227340266, 0)
+MainRgbFrame.Selectable = true
+MainRgbFrame.Size = UDim2.new(0, 666, 0, 366)
 
-Frame.Parent = cannongui
-Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-Frame.Position = UDim2.new(0, 677, 0, 225)
-Frame.Size = UDim2.new(0, 264, 0, 204)
+MainContainer.Name = "MainContainer"
+MainContainer.Parent = MainRgbFrame
+MainContainer.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainContainer.Position = UDim2.new(0.00459866412, 0, 0.00798061676, 0)
+MainContainer.Size = UDim2.new(0, 660, 0, 360)
+MainContainer.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+MainContainer.ImageTransparency = 1.000
 
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Frame_2.Position = UDim2.new(0, 2, 0, 2)
-Frame_2.Size = UDim2.new(0, 260, 0, 200)
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = MainContainer
 
-UICorner_2.Parent = Frame_2
+SideBar.Name = "SideBar"
+SideBar.Parent = MainContainer
+SideBar.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+SideBar.BorderSizePixel = 0
+SideBar.Size = UDim2.new(0, 61, 0, 360)
+SideBar.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+SideBar.ImageTransparency = 1.000
 
-TextBox.Parent = Frame_2
-TextBox.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-TextBox.Position = UDim2.new(0.11240305, 0, 0.289340049, 0)
-TextBox.Size = UDim2.new(0, 200, 0, 42)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = SideBar
 
-UICorner_3.Parent = TextBox
+SettingsButton.Name = "SettingsButton"
+SettingsButton.Parent = SideBar
+SettingsButton.BackgroundTransparency = 1.000
+SettingsButton.LayoutOrder = 8
+SettingsButton.Position = UDim2.new(0.199000001, 0, 0.837000012, 0)
+SettingsButton.Size = UDim2.new(0, 35, 0, 33)
+SettingsButton.ZIndex = 2
+SettingsButton.Image = "rbxassetid://3926307971"
+SettingsButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+SettingsButton.ImageRectOffset = Vector2.new(324, 124)
+SettingsButton.ImageRectSize = Vector2.new(36, 36)
 
-TextLabel.Parent = Frame_2
-TextLabel.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+PlayerButton.Name = "PlayerButton"
+PlayerButton.Parent = SideBar
+PlayerButton.BackgroundTransparency = 1.000
+PlayerButton.LayoutOrder = 2
+PlayerButton.Position = UDim2.new(0.198944151, 0, 0.173332527, 0)
+PlayerButton.Size = UDim2.new(0, 35, 0, 33)
+PlayerButton.ZIndex = 2
+PlayerButton.Image = "rbxassetid://3926307971"
+PlayerButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+PlayerButton.ImageRectOffset = Vector2.new(884, 4)
+PlayerButton.ImageRectSize = Vector2.new(36, 36)
+
+AutoBuyButton.Name = "AutoBuyButton"
+AutoBuyButton.Parent = SideBar
+AutoBuyButton.BackgroundTransparency = 1.000
+AutoBuyButton.LayoutOrder = 4
+AutoBuyButton.Position = UDim2.new(0.212515503, 0, 0.311168849, 0)
+AutoBuyButton.Size = UDim2.new(0, 35, 0, 33)
+AutoBuyButton.ZIndex = 2
+AutoBuyButton.Image = "rbxassetid://3926305904"
+AutoBuyButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+AutoBuyButton.ImageRectOffset = Vector2.new(200, 4)
+AutoBuyButton.ImageRectSize = Vector2.new(24, 24)
+
+TeleportsButton.Name = "TeleportsButton"
+TeleportsButton.Parent = SideBar
+TeleportsButton.BackgroundTransparency = 1.000
+TeleportsButton.LayoutOrder = 3
+TeleportsButton.Position = UDim2.new(0.200915724, 0, 0.442698538, 0)
+TeleportsButton.Size = UDim2.new(0, 35, 0, 33)
+TeleportsButton.ZIndex = 2
+TeleportsButton.Image = "rbxassetid://3926305904"
+TeleportsButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+TeleportsButton.ImageRectOffset = Vector2.new(164, 44)
+TeleportsButton.ImageRectSize = Vector2.new(36, 36)
+
+SearchButton.Name = "SearchButton"
+SearchButton.Parent = SideBar
+SearchButton.BackgroundTransparency = 1.000
+SearchButton.LayoutOrder = 6
+SearchButton.Position = UDim2.new(0.201000005, 0, 0.703000009, 0)
+SearchButton.Size = UDim2.new(0, 35, 0, 33)
+SearchButton.ZIndex = 2
+SearchButton.Image = "rbxassetid://3926305904"
+SearchButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+SearchButton.ImageRectOffset = Vector2.new(964, 324)
+SearchButton.ImageRectSize = Vector2.new(36, 36)
+
+UIListLayout.Parent = SideBar
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0, 10)
+
+HomeButton.Name = "HomeButton"
+HomeButton.Parent = SideBar
+HomeButton.BackgroundTransparency = 1.000
+HomeButton.LayoutOrder = 1
+HomeButton.Position = UDim2.new(-0.65154326, 0, 0.422222257, 0)
+HomeButton.Size = UDim2.new(0, 37, 0, 35)
+HomeButton.ZIndex = 2
+HomeButton.Image = "rbxassetid://3926305904"
+HomeButton.ImageRectOffset = Vector2.new(964, 204)
+HomeButton.ImageRectSize = Vector2.new(36, 36)
+
+UtilityButton.Name = "UtilityButton"
+UtilityButton.Parent = SideBar
+UtilityButton.BackgroundTransparency = 1.000
+UtilityButton.LayoutOrder = 5
+UtilityButton.Position = UDim2.new(0.200915635, 0, 0.574079573, 0)
+UtilityButton.Size = UDim2.new(0, 35, 0, 33)
+UtilityButton.ZIndex = 2
+UtilityButton.Image = "rbxassetid://3926305904"
+UtilityButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+UtilityButton.ImageRectOffset = Vector2.new(644, 364)
+UtilityButton.ImageRectSize = Vector2.new(36, 36)
+
+ChatButton.Name = "ChatButton"
+ChatButton.Parent = SideBar
+ChatButton.BackgroundTransparency = 1.000
+ChatButton.LayoutOrder = 7
+ChatButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+ChatButton.Size = UDim2.new(0, 35, 0, 35)
+ChatButton.ZIndex = 2
+ChatButton.Image = "rbxassetid://3926305904"
+ChatButton.ImageColor3 = Color3.fromRGB(190, 190, 190)
+ChatButton.ImageRectOffset = Vector2.new(564, 564)
+ChatButton.ImageRectSize = Vector2.new(36, 36)
+
+UtilitiesFrame.Name = "UtilitiesFrame"
+UtilitiesFrame.Parent = MainContainer
+UtilitiesFrame.Active = true
+UtilitiesFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+UtilitiesFrame.BorderSizePixel = 0
+UtilitiesFrame.Position = UDim2.new(0.122727275, 0, 0.174999997, 0)
+UtilitiesFrame.Size = UDim2.new(0, 564, 0, 287)
+UtilitiesFrame.Visible = false
+UtilitiesFrame.CanvasSize = UDim2.new(0, 0, 1.39999998, 0)
+
+rejoinbutton.Name = "rejoinbutton"
+rejoinbutton.Parent = UtilitiesFrame
+rejoinbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+rejoinbutton.BorderColor3 = Color3.fromRGB(47, 47, 47)
+rejoinbutton.BorderSizePixel = 0
+rejoinbutton.LayoutOrder = 2
+rejoinbutton.Position = UDim2.new(0.01171875, 0, 0.0922752842, 0)
+rejoinbutton.Size = UDim2.new(0, 506, 0, 40)
+rejoinbutton.Font = Enum.Font.SourceSans
+rejoinbutton.Text = " Rejoin Game"
+rejoinbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+rejoinbutton.TextScaled = true
+rejoinbutton.TextSize = 14.000
+rejoinbutton.TextStrokeTransparency = 0.550
+rejoinbutton.TextWrapped = true
+rejoinbutton.TextXAlignment = Enum.TextXAlignment.Left
+rejoinbutton.TextYAlignment = Enum.TextYAlignment.Bottom
+
+tptoolbutton.Name = "tptoolbutton"
+tptoolbutton.Parent = UtilitiesFrame
+tptoolbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+tptoolbutton.BorderColor3 = Color3.fromRGB(47, 47, 47)
+tptoolbutton.BorderSizePixel = 0
+tptoolbutton.LayoutOrder = 4
+tptoolbutton.Position = UDim2.new(0.01171875, 0, 0.315273404, 0)
+tptoolbutton.Size = UDim2.new(0, 506, 0, 40)
+tptoolbutton.Font = Enum.Font.SourceSans
+tptoolbutton.Text = " Teleport Tool"
+tptoolbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+tptoolbutton.TextScaled = true
+tptoolbutton.TextSize = 14.000
+tptoolbutton.TextStrokeTransparency = 0.550
+tptoolbutton.TextWrapped = true
+tptoolbutton.TextXAlignment = Enum.TextXAlignment.Left
+tptoolbutton.TextYAlignment = Enum.TextYAlignment.Bottom
+
+autofarmbutton.Name = "autofarmbutton"
+autofarmbutton.Parent = UtilitiesFrame
+autofarmbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+autofarmbutton.BorderColor3 = Color3.fromRGB(47, 47, 47)
+autofarmbutton.BorderSizePixel = 0
+autofarmbutton.LayoutOrder = 3
+autofarmbutton.Position = UDim2.new(0.01171875, 0, 0.241731673, 0)
+autofarmbutton.Size = UDim2.new(0, 506, 0, 40)
+autofarmbutton.Font = Enum.Font.SourceSans
+autofarmbutton.Text = " Gold Autofarm"
+autofarmbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+autofarmbutton.TextScaled = true
+autofarmbutton.TextSize = 14.000
+autofarmbutton.TextStrokeTransparency = 0.550
+autofarmbutton.TextWrapped = true
+autofarmbutton.TextXAlignment = Enum.TextXAlignment.Left
+autofarmbutton.TextYAlignment = Enum.TextYAlignment.Bottom
+
+redeemcodesbutton.Name = "redeemcodesbutton"
+redeemcodesbutton.Parent = UtilitiesFrame
+redeemcodesbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+redeemcodesbutton.BorderColor3 = Color3.fromRGB(47, 47, 47)
+redeemcodesbutton.BorderSizePixel = 0
+redeemcodesbutton.LayoutOrder = 3
+redeemcodesbutton.Position = UDim2.new(0.01171875, 0, 0.382956356, 0)
+redeemcodesbutton.Size = UDim2.new(0, 506, 0, 40)
+redeemcodesbutton.Font = Enum.Font.SourceSans
+redeemcodesbutton.Text = " Redeem codes"
+redeemcodesbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+redeemcodesbutton.TextScaled = true
+redeemcodesbutton.TextSize = 14.000
+redeemcodesbutton.TextStrokeTransparency = 0.550
+redeemcodesbutton.TextWrapped = true
+redeemcodesbutton.TextXAlignment = Enum.TextXAlignment.Left
+redeemcodesbutton.TextYAlignment = Enum.TextYAlignment.Bottom
+
+easterevent.Name = "easterevent"
+easterevent.Parent = UtilitiesFrame
+easterevent.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+easterevent.BorderColor3 = Color3.fromRGB(47, 47, 47)
+easterevent.BorderSizePixel = 0
+easterevent.LayoutOrder = 8
+easterevent.Position = UDim2.new(0.01171875, 0, 0.502784729, 0)
+easterevent.Size = UDim2.new(0, 506, 0, 40)
+easterevent.Font = Enum.Font.SourceSans
+easterevent.Text = " Easter Event"
+easterevent.TextColor3 = Color3.fromRGB(255, 255, 255)
+easterevent.TextScaled = true
+easterevent.TextSize = 14.000
+easterevent.TextStrokeTransparency = 0.550
+easterevent.TextWrapped = true
+easterevent.TextXAlignment = Enum.TextXAlignment.Left
+easterevent.TextYAlignment = Enum.TextYAlignment.Bottom
+
+spidybf.Name = "spidybf"
+spidybf.Parent = UtilitiesFrame
+spidybf.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+spidybf.BorderColor3 = Color3.fromRGB(47, 47, 47)
+spidybf.BorderSizePixel = 0
+spidybf.LayoutOrder = 7
+spidybf.Position = UDim2.new(0.01171875, 0, 0.584266186, 0)
+spidybf.Size = UDim2.new(0, 506, 0, 40)
+spidybf.Font = Enum.Font.SourceSans
+spidybf.Text = " Spider Boss Fight"
+spidybf.TextColor3 = Color3.fromRGB(255, 255, 255)
+spidybf.TextScaled = true
+spidybf.TextSize = 14.000
+spidybf.TextStrokeTransparency = 0.550
+spidybf.TextWrapped = true
+spidybf.TextXAlignment = Enum.TextXAlignment.Left
+spidybf.TextYAlignment = Enum.TextYAlignment.Bottom
+
+winterplace.Name = "winterplace"
+winterplace.Parent = UtilitiesFrame
+winterplace.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+winterplace.BorderColor3 = Color3.fromRGB(47, 47, 47)
+winterplace.BorderSizePixel = 0
+winterplace.LayoutOrder = 6
+winterplace.Position = UDim2.new(0.01171875, 0, 0.665747643, 0)
+winterplace.Size = UDim2.new(0, 506, 0, 40)
+winterplace.Font = Enum.Font.SourceSans
+winterplace.Text = " Winter Event"
+winterplace.TextColor3 = Color3.fromRGB(255, 255, 255)
+winterplace.TextScaled = true
+winterplace.TextSize = 14.000
+winterplace.TextStrokeTransparency = 0.550
+winterplace.TextWrapped = true
+winterplace.TextXAlignment = Enum.TextXAlignment.Left
+winterplace.TextYAlignment = Enum.TextYAlignment.Bottom
+
+eventtp.Name = "eventtp"
+eventtp.Parent = UtilitiesFrame
+eventtp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+eventtp.BackgroundTransparency = 1.000
+eventtp.LayoutOrder = 5
+eventtp.Position = UDim2.new(0.01022695, 0, 0.465777814, 0)
+eventtp.Size = UDim2.new(0, 506, 0, 20)
+eventtp.Font = Enum.Font.SourceSans
+eventtp.Text = "   Event Teleports:"
+eventtp.TextColor3 = Color3.fromRGB(255, 255, 255)
+eventtp.TextScaled = true
+eventtp.TextSize = 14.000
+eventtp.TextWrapped = true
+eventtp.TextXAlignment = Enum.TextXAlignment.Left
+
+servhopbutton.Name = "servhopbutton"
+servhopbutton.Parent = UtilitiesFrame
+servhopbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+servhopbutton.BorderColor3 = Color3.fromRGB(47, 47, 47)
+servhopbutton.BorderSizePixel = 0
+servhopbutton.LayoutOrder = 1
+servhopbutton.Position = UDim2.new(0.01171875, 0, 0.16449751, 0)
+servhopbutton.Size = UDim2.new(0, 506, 0, 40)
+servhopbutton.Font = Enum.Font.SourceSans
+servhopbutton.Text = " Server Hop"
+servhopbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+servhopbutton.TextScaled = true
+servhopbutton.TextSize = 14.000
+servhopbutton.TextStrokeTransparency = 0.550
+servhopbutton.TextWrapped = true
+servhopbutton.TextXAlignment = Enum.TextXAlignment.Left
+servhopbutton.TextYAlignment = Enum.TextYAlignment.Bottom
+
+UIListLayout_2.Parent = UtilitiesFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+romvedquests.Name = "romvedquests"
+romvedquests.Parent = UtilitiesFrame
+romvedquests.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+romvedquests.BackgroundTransparency = 1.000
+romvedquests.LayoutOrder = 9
+romvedquests.Position = UDim2.new(0.01022695, 0, 0.465777814, 0)
+romvedquests.Size = UDim2.new(0, 506, 0, 20)
+romvedquests.Font = Enum.Font.SourceSans
+romvedquests.Text = "   Removed Quests:"
+romvedquests.TextColor3 = Color3.fromRGB(255, 255, 255)
+romvedquests.TextScaled = true
+romvedquests.TextSize = 14.000
+romvedquests.TextWrapped = true
+romvedquests.TextXAlignment = Enum.TextXAlignment.Left
+
+fabbyquest.Name = "fabbyquest"
+fabbyquest.Parent = UtilitiesFrame
+fabbyquest.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+fabbyquest.BorderColor3 = Color3.fromRGB(47, 47, 47)
+fabbyquest.BorderSizePixel = 0
+fabbyquest.LayoutOrder = 10
+fabbyquest.Position = UDim2.new(0.01171875, 0, 0.665747643, 0)
+fabbyquest.Size = UDim2.new(0, 506, 0, 40)
+fabbyquest.Font = Enum.Font.SourceSans
+fabbyquest.Text = " Fabby Quest"
+fabbyquest.TextColor3 = Color3.fromRGB(255, 255, 255)
+fabbyquest.TextScaled = true
+fabbyquest.TextSize = 14.000
+fabbyquest.TextStrokeTransparency = 0.550
+fabbyquest.TextWrapped = true
+fabbyquest.TextXAlignment = Enum.TextXAlignment.Left
+fabbyquest.TextYAlignment = Enum.TextYAlignment.Bottom
+
+gingfight.Name = "gingfight"
+gingfight.Parent = UtilitiesFrame
+gingfight.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+gingfight.BorderColor3 = Color3.fromRGB(47, 47, 47)
+gingfight.BorderSizePixel = 0
+gingfight.LayoutOrder = 11
+gingfight.Position = UDim2.new(0.01171875, 0, 0.665747643, 0)
+gingfight.Size = UDim2.new(0, 506, 0, 40)
+gingfight.Font = Enum.Font.SourceSans
+gingfight.Text = " Gingerbread Fight"
+gingfight.TextColor3 = Color3.fromRGB(255, 255, 255)
+gingfight.TextScaled = true
+gingfight.TextSize = 14.000
+gingfight.TextStrokeTransparency = 0.550
+gingfight.TextWrapped = true
+gingfight.TextXAlignment = Enum.TextXAlignment.Left
+gingfight.TextYAlignment = Enum.TextYAlignment.Bottom
+
+invasion.Name = "invasion"
+invasion.Parent = UtilitiesFrame
+invasion.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+invasion.BorderColor3 = Color3.fromRGB(47, 47, 47)
+invasion.BorderSizePixel = 0
+invasion.LayoutOrder = 12
+invasion.Position = UDim2.new(0.01171875, 0, 0.665747643, 0)
+invasion.Size = UDim2.new(0, 506, 0, 40)
+invasion.Font = Enum.Font.SourceSans
+invasion.Text = " Invasion"
+invasion.TextColor3 = Color3.fromRGB(255, 255, 255)
+invasion.TextScaled = true
+invasion.TextSize = 14.000
+invasion.TextStrokeTransparency = 0.550
+invasion.TextWrapped = true
+invasion.TextXAlignment = Enum.TextXAlignment.Left
+invasion.TextYAlignment = Enum.TextYAlignment.Bottom
+
+eventtp_2.Name = "eventtp"
+eventtp_2.Parent = UtilitiesFrame
+eventtp_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+eventtp_2.BackgroundTransparency = 1.000
+eventtp_2.LayoutOrder = 3
+eventtp_2.Position = UDim2.new(0.01022695, 0, 0.465777814, 0)
+eventtp_2.Size = UDim2.new(0, 506, 0, 20)
+eventtp_2.Font = Enum.Font.SourceSans
+eventtp_2.Text = "   Teleport Utilities:"
+eventtp_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+eventtp_2.TextScaled = true
+eventtp_2.TextSize = 14.000
+eventtp_2.TextWrapped = true
+eventtp_2.TextXAlignment = Enum.TextXAlignment.Left
+
+tpbuilds.Name = "tpbuilds"
+tpbuilds.Parent = UtilitiesFrame
+tpbuilds.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+tpbuilds.BorderColor3 = Color3.fromRGB(47, 47, 47)
+tpbuilds.BorderSizePixel = 0
+tpbuilds.LayoutOrder = 4
+tpbuilds.Position = UDim2.new(0.01171875, 0, 0.315273404, 0)
+tpbuilds.Size = UDim2.new(0, 506, 0, 40)
+tpbuilds.Font = Enum.Font.SourceSans
+tpbuilds.Text = " Teleport Builds"
+tpbuilds.TextColor3 = Color3.fromRGB(255, 255, 255)
+tpbuilds.TextScaled = true
+tpbuilds.TextSize = 14.000
+tpbuilds.TextStrokeTransparency = 0.550
+tpbuilds.TextWrapped = true
+tpbuilds.TextXAlignment = Enum.TextXAlignment.Left
+tpbuilds.TextYAlignment = Enum.TextYAlignment.Bottom
+
+PlayerFrame.Name = "PlayerFrame"
+PlayerFrame.Parent = MainContainer
+PlayerFrame.Active = true
+PlayerFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+PlayerFrame.BorderSizePixel = 0
+PlayerFrame.Position = UDim2.new(0.122727275, 0, 0.174999997, 0)
+PlayerFrame.Size = UDim2.new(0, 564, 0, 287)
+PlayerFrame.Visible = false
+PlayerFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+resetbutton.Name = "resetbutton"
+resetbutton.Parent = PlayerFrame
+resetbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+resetbutton.BackgroundTransparency = 1.000
+resetbutton.BorderSizePixel = 0
+resetbutton.Position = UDim2.new(0.0299999993, 0, 0.825999975, 0)
+resetbutton.Size = UDim2.new(0, 502, 0, 37)
+resetbutton.Font = Enum.Font.SourceSans
+resetbutton.Text = "Reset Character"
+resetbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+resetbutton.TextScaled = true
+resetbutton.TextSize = 14.000
+resetbutton.TextWrapped = true
+resetbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+noclipbutton.Name = "noclipbutton"
+noclipbutton.Parent = PlayerFrame
+noclipbutton.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+noclipbutton.BorderSizePixel = 0
+noclipbutton.Position = UDim2.new(0.191489354, 0, 0.672473848, 0)
+noclipbutton.Size = UDim2.new(0, 54, 0, 30)
+noclipbutton.AutoButtonColor = false
+noclipbutton.Font = Enum.Font.SourceSans
+noclipbutton.Text = "N"
+noclipbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+noclipbutton.TextScaled = true
+noclipbutton.TextSize = 14.000
+noclipbutton.TextWrapped = true
+
+UICorner_3.Parent = noclipbutton
+
+walkspeedsliderbar.Name = "walkspeedsliderbar"
+walkspeedsliderbar.Parent = PlayerFrame
+walkspeedsliderbar.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+walkspeedsliderbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+walkspeedsliderbar.BorderSizePixel = 0
+walkspeedsliderbar.Position = UDim2.new(0.0295190811, 0, 0.182245865, 0)
+walkspeedsliderbar.Size = UDim2.new(0, 392, 0, 14)
+
+sliderbutton.Name = "sliderbutton"
+sliderbutton.Parent = walkspeedsliderbar
+sliderbutton.AnchorPoint = Vector2.new(0.5, 0.5)
+sliderbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sliderbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbutton.BorderSizePixel = 0
+sliderbutton.Position = UDim2.new(0.0090909088, 0, 0.5, 0)
+sliderbutton.Size = UDim2.new(0, 14, 0, 14)
+sliderbutton.AutoButtonColor = false
+sliderbutton.Font = Enum.Font.SourceSans
+sliderbutton.Text = ""
+sliderbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+sliderbutton.TextSize = 14.000
+
+UICorner_4.Parent = sliderbutton
+
+TextLabel.Parent = walkspeedsliderbar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0, 0, 0.0456852801, 0)
-TextLabel.Size = UDim2.new(0, 258, 0, 41)
+TextLabel.Position = UDim2.new(0, 0, -3.09299994, 0)
+TextLabel.Size = UDim2.new(0, 455, 0, 30)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Num of cannons:"
+TextLabel.Text = "Walkspeed: "
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_4.Parent = TextLabel
+UICorner_5.Parent = walkspeedsliderbar
 
-TextButton_2.Parent = Frame_2
-TextButton_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-TextButton_2.Position = UDim2.new(0.112403102, 0, 0.539060891, 0)
-TextButton_2.Size = UDim2.new(0, 200, 0, 50)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Buy"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
+jumppowersliderbar.Name = "jumppowersliderbar"
+jumppowersliderbar.Parent = PlayerFrame
+jumppowersliderbar.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+jumppowersliderbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+jumppowersliderbar.BorderSizePixel = 0
+jumppowersliderbar.Position = UDim2.new(0.0295190811, 0, 0.419179678, 0)
+jumppowersliderbar.Size = UDim2.new(0, 392, 0, 14)
 
-UICorner_5.Parent = TextButton_2
+sliderbutton_2.Name = "sliderbutton"
+sliderbutton_2.Parent = jumppowersliderbar
+sliderbutton_2.AnchorPoint = Vector2.new(0.5, 0.5)
+sliderbutton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sliderbutton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbutton_2.BorderSizePixel = 0
+sliderbutton_2.Position = UDim2.new(0.0090909088, 0, 0.5, 0)
+sliderbutton_2.Size = UDim2.new(0, 14, 0, 14)
+sliderbutton_2.AutoButtonColor = false
+sliderbutton_2.Font = Enum.Font.SourceSans
+sliderbutton_2.Text = ""
+sliderbutton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+sliderbutton_2.TextSize = 14.000
 
-dlabel.Name = "dlabel"
-dlabel.Parent = Frame_2
-dlabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-dlabel.BackgroundTransparency = 1.000
-dlabel.Position = UDim2.new(0.111538462, 0, 0.839999974, 0)
-dlabel.Size = UDim2.new(0, 100, 0, 25)
-dlabel.Font = Enum.Font.SourceSans
-dlabel.Text = "Clear Animation:"
-dlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-dlabel.TextScaled = true
-dlabel.TextSize = 14.000
-dlabel.TextWrapped = true
+UICorner_6.Parent = sliderbutton_2
 
-UICorner_6.Parent = dlabel
+TextLabel_2.Parent = jumppowersliderbar
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, -3.02200007, 0)
+TextLabel_2.Size = UDim2.new(0, 455, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "JumpPower: "
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_7.Parent = Frame
+UICorner_7.Parent = jumppowersliderbar
 
-dbutton.Name = "dbutton"
-dbutton.Parent = Frame
-dbutton.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-dbutton.Position = UDim2.new(0.532857716, 0, 0.83317852, 0)
-dbutton.Size = UDim2.new(0, 90, 0, 25)
-dbutton.Font = Enum.Font.SourceSans
-dbutton.Text = "False"
-dbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
-dbutton.TextScaled = true
-dbutton.TextSize = 14.000
-dbutton.TextWrapped = true
+nocliplabel.Name = "nocliplabel"
+nocliplabel.Parent = PlayerFrame
+nocliplabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nocliplabel.BackgroundTransparency = 1.000
+nocliplabel.BorderSizePixel = 0
+nocliplabel.Position = UDim2.new(0.0299999993, 0, 0.671999991, 0)
+nocliplabel.Size = UDim2.new(0, 81, 0, 30)
+nocliplabel.Font = Enum.Font.SourceSans
+nocliplabel.Text = "Noclip:"
+nocliplabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+nocliplabel.TextScaled = true
+nocliplabel.TextSize = 14.000
+nocliplabel.TextWrapped = true
+nocliplabel.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_8.Parent = dbutton
+flylabel.Name = "flylabel"
+flylabel.Parent = PlayerFrame
+flylabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+flylabel.BackgroundTransparency = 1.000
+flylabel.Position = UDim2.new(0.0299999993, 0, 0.515999973, 0)
+flylabel.Size = UDim2.new(0, 34, 0, 30)
+flylabel.Font = Enum.Font.SourceSans
+flylabel.Text = "Fly"
+flylabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+flylabel.TextScaled = true
+flylabel.TextSize = 14.000
+flylabel.TextWrapped = true
+flylabel.TextXAlignment = Enum.TextXAlignment.Left
+
+togglefly.Name = "togglefly"
+togglefly.Parent = flylabel
+togglefly.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+togglefly.BorderColor3 = Color3.fromRGB(50, 50, 50)
+togglefly.Position = UDim2.new(1.20588231, 0, 0.0666666701, 0)
+togglefly.Size = UDim2.new(0, 30, 0, 30)
+togglefly.Font = Enum.Font.SourceSans
+togglefly.Text = ""
+togglefly.TextColor3 = Color3.fromRGB(0, 0, 0)
+togglefly.TextSize = 14.000
+
+UICorner_8.Parent = togglefly
+
+speedlabel.Name = "speedlabel"
+speedlabel.Parent = flylabel
+speedlabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+speedlabel.BackgroundTransparency = 1.000
+speedlabel.Position = UDim2.new(2.39345717, 0, 0.0615714192, 0)
+speedlabel.Size = UDim2.new(0, 75, 0, 30)
+speedlabel.Font = Enum.Font.SourceSans
+speedlabel.Text = "Speed:"
+speedlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+speedlabel.TextScaled = true
+speedlabel.TextSize = 14.000
+speedlabel.TextWrapped = true
+
+speednum.Name = "speednum"
+speednum.Parent = speedlabel
+speednum.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+speednum.BackgroundTransparency = 1.000
+speednum.Position = UDim2.new(1.50666666, 0, 0.0666666701, 0)
+speednum.Size = UDim2.new(0, 50, 0, 30)
+speednum.Font = Enum.Font.SourceSans
+speednum.Text = "1"
+speednum.TextColor3 = Color3.fromRGB(255, 255, 255)
+speednum.TextScaled = true
+speednum.TextSize = 14.000
+speednum.TextWrapped = true
+
+plus.Name = "plus"
+plus.Parent = speedlabel
+plus.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+plus.BackgroundTransparency = 1.000
+plus.BorderSizePixel = 0
+plus.Position = UDim2.new(2.17333341, 0, 0, 0)
+plus.Size = UDim2.new(0, 30, 0, 30)
+plus.Font = Enum.Font.SourceSans
+plus.Text = "+"
+plus.TextColor3 = Color3.fromRGB(255, 255, 255)
+plus.TextScaled = true
+plus.TextSize = 14.000
+plus.TextWrapped = true
+
+min.Name = "min"
+min.Parent = speedlabel
+min.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+min.BackgroundTransparency = 1.000
+min.BorderSizePixel = 0
+min.Position = UDim2.new(1.1066668, 0, 0.0666666701, 0)
+min.Size = UDim2.new(0, 30, 0, 30)
+min.Font = Enum.Font.SourceSans
+min.Text = "-"
+min.TextColor3 = Color3.fromRGB(255, 255, 255)
+min.TextScaled = true
+min.TextSize = 14.000
+min.TextWrapped = true
+
+TeleportsFrame.Name = "TeleportsFrame"
+TeleportsFrame.Parent = MainContainer
+TeleportsFrame.Active = true
+TeleportsFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+TeleportsFrame.BorderSizePixel = 0
+TeleportsFrame.Position = UDim2.new(0.122727275, 0, 0.174999997, 0)
+TeleportsFrame.Size = UDim2.new(0, 564, 0, 287)
+TeleportsFrame.Visible = false
+TeleportsFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+blueplottpbutton.Name = "blueplottpbutton"
+blueplottpbutton.Parent = TeleportsFrame
+blueplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+blueplottpbutton.BorderSizePixel = 0
+blueplottpbutton.Position = UDim2.new(0, 0, 0.0174216032, 0)
+blueplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+blueplottpbutton.Font = Enum.Font.SourceSans
+blueplottpbutton.Text = " Blue Plot"
+blueplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+blueplottpbutton.TextScaled = true
+blueplottpbutton.TextSize = 14.000
+blueplottpbutton.TextWrapped = true
+blueplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+greenplottpbutton.Name = "greenplottpbutton"
+greenplottpbutton.Parent = TeleportsFrame
+greenplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+greenplottpbutton.BorderSizePixel = 0
+greenplottpbutton.Position = UDim2.new(0, 0, 0.146341473, 0)
+greenplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+greenplottpbutton.Font = Enum.Font.SourceSans
+greenplottpbutton.Text = " Green Plot"
+greenplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+greenplottpbutton.TextScaled = true
+greenplottpbutton.TextSize = 14.000
+greenplottpbutton.TextWrapped = true
+greenplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+blackplottpbutton.Name = "blackplottpbutton"
+blackplottpbutton.Parent = TeleportsFrame
+blackplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+blackplottpbutton.BorderSizePixel = 0
+blackplottpbutton.Position = UDim2.new(0, 0, 0.296167254, 0)
+blackplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+blackplottpbutton.Font = Enum.Font.SourceSans
+blackplottpbutton.Text = " Black Plot"
+blackplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+blackplottpbutton.TextScaled = true
+blackplottpbutton.TextSize = 14.000
+blackplottpbutton.TextWrapped = true
+blackplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+magentaplottpbutton.Name = "magentaplottpbutton"
+magentaplottpbutton.Parent = TeleportsFrame
+magentaplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+magentaplottpbutton.BorderSizePixel = 0
+magentaplottpbutton.Position = UDim2.new(0, 0, 0.439024389, 0)
+magentaplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+magentaplottpbutton.Font = Enum.Font.SourceSans
+magentaplottpbutton.Text = " Magenta Plot"
+magentaplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+magentaplottpbutton.TextScaled = true
+magentaplottpbutton.TextSize = 14.000
+magentaplottpbutton.TextWrapped = true
+magentaplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+yellowplottpbutton.Name = "yellowplottpbutton"
+yellowplottpbutton.Parent = TeleportsFrame
+yellowplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+yellowplottpbutton.BorderSizePixel = 0
+yellowplottpbutton.Position = UDim2.new(0, 0, 0.5888502, 0)
+yellowplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+yellowplottpbutton.Font = Enum.Font.SourceSans
+yellowplottpbutton.Text = " Yellow Plot"
+yellowplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+yellowplottpbutton.TextScaled = true
+yellowplottpbutton.TextSize = 14.000
+yellowplottpbutton.TextWrapped = true
+yellowplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+whiteplottpbutton.Name = "whiteplottpbutton"
+whiteplottpbutton.Parent = TeleportsFrame
+whiteplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+whiteplottpbutton.BorderSizePixel = 0
+whiteplottpbutton.Position = UDim2.new(0, 0, 0.735191643, 0)
+whiteplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+whiteplottpbutton.Font = Enum.Font.SourceSans
+whiteplottpbutton.Text = " White Plot"
+whiteplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+whiteplottpbutton.TextScaled = true
+whiteplottpbutton.TextSize = 14.000
+whiteplottpbutton.TextWrapped = true
+whiteplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+redplottpbutton.Name = "redplottpbutton"
+redplottpbutton.Parent = TeleportsFrame
+redplottpbutton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+redplottpbutton.BorderSizePixel = 0
+redplottpbutton.Position = UDim2.new(0, 0, 0.878048837, 0)
+redplottpbutton.Size = UDim2.new(0, 470, 0, 35)
+redplottpbutton.Font = Enum.Font.SourceSans
+redplottpbutton.Text = " Red Plot"
+redplottpbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+redplottpbutton.TextScaled = true
+redplottpbutton.TextSize = 14.000
+redplottpbutton.TextWrapped = true
+redplottpbutton.TextXAlignment = Enum.TextXAlignment.Left
+
+AutoBuyFrame.Name = "AutoBuyFrame"
+AutoBuyFrame.Parent = MainContainer
+AutoBuyFrame.Active = true
+AutoBuyFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+AutoBuyFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+AutoBuyFrame.BorderSizePixel = 0
+AutoBuyFrame.ClipsDescendants = false
+AutoBuyFrame.Position = UDim2.new(0.123000003, 0, 0.174999997, 0)
+AutoBuyFrame.Size = UDim2.new(0, 564, 0, 287)
+AutoBuyFrame.Visible = false
+AutoBuyFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+ScrollingFrame.Parent = AutoBuyFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.449495792, 0, 0, 0)
+ScrollingFrame.Size = UDim2.new(0, 310, 0, 287)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 5)
+ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame.ScrollBarThickness = 10
+ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+UIListLayout_3.Parent = ScrollingFrame
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 2)
+
+AutoBuyLabel.Name = "AutoBuyLabel"
+AutoBuyLabel.Parent = AutoBuyFrame
+AutoBuyLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoBuyLabel.BackgroundTransparency = 1.000
+AutoBuyLabel.BorderSizePixel = 0
+AutoBuyLabel.Position = UDim2.new(0.0989860371, 0, 0.896504164, 0)
+AutoBuyLabel.Size = UDim2.new(0, 165, 0, 25)
+AutoBuyLabel.Font = Enum.Font.SourceSans
+AutoBuyLabel.Text = "Waiting for Item selection..."
+AutoBuyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBuyLabel.TextScaled = true
+AutoBuyLabel.TextSize = 20.000
+AutoBuyLabel.TextWrapped = true
+
+BuyButton.Name = "BuyButton"
+BuyButton.Parent = AutoBuyFrame
+BuyButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+BuyButton.Position = UDim2.new(0.109291889, 0, 0.714285731, 0)
+BuyButton.Size = UDim2.new(0, 150, 0, 40)
+BuyButton.Font = Enum.Font.SourceSans
+BuyButton.Text = "Buy"
+BuyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BuyButton.TextScaled = true
+BuyButton.TextSize = 14.000
+BuyButton.TextWrapped = true
+
+UICorner_9.Parent = BuyButton
+
+MinusIcon.Name = "MinusIcon"
+MinusIcon.Parent = AutoBuyFrame
+MinusIcon.BackgroundTransparency = 1.000
+MinusIcon.LayoutOrder = 6
+MinusIcon.Position = UDim2.new(0.114611037, 0, 0.563622892, 0)
+MinusIcon.Size = UDim2.new(0, 35, 0, 35)
+MinusIcon.ZIndex = 2
+MinusIcon.Image = "rbxassetid://3926307971"
+MinusIcon.ImageRectOffset = Vector2.new(884, 284)
+MinusIcon.ImageRectSize = Vector2.new(36, 36)
+
+PlusIcon.Name = "PlusIcon"
+PlusIcon.Parent = AutoBuyFrame
+PlusIcon.BackgroundTransparency = 1.000
+PlusIcon.LayoutOrder = 3
+PlusIcon.Position = UDim2.new(0.308866024, 0, 0.563622892, 0)
+PlusIcon.Size = UDim2.new(0, 35, 0, 35)
+PlusIcon.ZIndex = 2
+PlusIcon.Image = "rbxassetid://3926307971"
+PlusIcon.ImageRectOffset = Vector2.new(324, 364)
+PlusIcon.ImageRectSize = Vector2.new(36, 36)
+
+QuantityNumber.Name = "QuantityNumber"
+QuantityNumber.Parent = AutoBuyFrame
+QuantityNumber.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+QuantityNumber.BorderSizePixel = 0
+QuantityNumber.Position = UDim2.new(0.178000048, 0, 0.564324021, 0)
+QuantityNumber.Size = UDim2.new(0, 74, 0, 35)
+QuantityNumber.ClearTextOnFocus = false
+QuantityNumber.Font = Enum.Font.SourceSans
+QuantityNumber.Text = "1"
+QuantityNumber.TextColor3 = Color3.fromRGB(255, 255, 255)
+QuantityNumber.TextScaled = true
+QuantityNumber.TextSize = 14.000
+QuantityNumber.TextWrapped = true
+
+UICorner_10.Parent = QuantityNumber
+
+BlockSelected.Name = "BlockSelected"
+BlockSelected.Parent = AutoBuyFrame
+BlockSelected.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+BlockSelected.BackgroundTransparency = 1.000
+BlockSelected.Position = UDim2.new(0.161347523, 0, 0.0661486089, 0)
+BlockSelected.Size = UDim2.new(0, 90, 0, 90)
+
+UICorner_11.Parent = BlockSelected
+
+Template.Name = "Template"
+Template.Parent = AutoBuyFrame
+Template.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Template.BackgroundTransparency = 1.000
+Template.BorderSizePixel = 0
+Template.Position = UDim2.new(0.0990943834, 0, 0.522179186, 0)
+Template.Size = UDim2.new(0, 250, 0, 35)
+Template.Visible = false
+Template.Font = Enum.Font.SourceSans
+Template.TextColor3 = Color3.fromRGB(212, 212, 212)
+Template.TextScaled = true
+Template.TextSize = 14.000
+Template.TextWrapped = true
+
+PriceLabel.Name = "PriceLabel"
+PriceLabel.Parent = AutoBuyFrame
+PriceLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PriceLabel.BackgroundTransparency = 1.000
+PriceLabel.Position = UDim2.new(0.0673758835, 0, 0.421602786, 0)
+PriceLabel.Size = UDim2.new(0, 200, 0, 40)
+PriceLabel.Font = Enum.Font.SourceSans
+PriceLabel.Text = "Price:  Gold Item Count: "
+PriceLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+PriceLabel.TextScaled = true
+PriceLabel.TextSize = 14.000
+PriceLabel.TextWrapped = true
+
+SettinsFrame.Name = "SettinsFrame"
+SettinsFrame.Parent = MainContainer
+SettinsFrame.Active = true
+SettinsFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+SettinsFrame.BorderSizePixel = 0
+SettinsFrame.Position = UDim2.new(0.122727275, 0, 0.174999997, 0)
+SettinsFrame.Size = UDim2.new(0, 564, 0, 287)
+SettinsFrame.Visible = false
+SettinsFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+keybinder.Name = "keybinder"
+keybinder.Parent = SettinsFrame
+keybinder.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+keybinder.Position = UDim2.new(0.660714269, 0, 0.0840882733, 0)
+keybinder.Size = UDim2.new(0, 162, 0, 50)
+keybinder.AutoButtonColor = false
+keybinder.Font = Enum.Font.SourceSans
+keybinder.Text = "LeftAlt"
+keybinder.TextColor3 = Color3.fromRGB(255, 255, 255)
+keybinder.TextScaled = true
+keybinder.TextSize = 14.000
+keybinder.TextWrapped = true
+
+UICorner_12.Parent = keybinder
+
+kbindchange.Name = "kbindchange"
+kbindchange.Parent = SettinsFrame
+kbindchange.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+kbindchange.BackgroundTransparency = 1.000
+kbindchange.Position = UDim2.new(0.0232142862, 0, 0.0840882733, 0)
+kbindchange.Size = UDim2.new(0, 335, 0, 50)
+kbindchange.Font = Enum.Font.SourceSans
+kbindchange.Text = "Change Keybind for Show/Hide:"
+kbindchange.TextColor3 = Color3.fromRGB(255, 255, 255)
+kbindchange.TextScaled = true
+kbindchange.TextSize = 14.000
+kbindchange.TextWrapped = true
+kbindchange.TextXAlignment = Enum.TextXAlignment.Left
+
+disablergb.Name = "disablergb"
+disablergb.Parent = SettinsFrame
+disablergb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+disablergb.BackgroundTransparency = 1.000
+disablergb.Position = UDim2.new(0.0232142862, 0, 0.307084799, 0)
+disablergb.Size = UDim2.new(0, 335, 0, 50)
+disablergb.Font = Enum.Font.SourceSans
+disablergb.Text = "Disable RGB frame colour:"
+disablergb.TextColor3 = Color3.fromRGB(255, 255, 255)
+disablergb.TextScaled = true
+disablergb.TextSize = 14.000
+disablergb.TextWrapped = true
+disablergb.TextXAlignment = Enum.TextXAlignment.Left
+
+rgbbutton.Name = "rgbbutton"
+rgbbutton.Parent = SettinsFrame
+rgbbutton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+rgbbutton.Position = UDim2.new(0.660714269, 0, 0.317537755, 0)
+rgbbutton.Size = UDim2.new(0, 162, 0, 50)
+rgbbutton.AutoButtonColor = false
+rgbbutton.Font = Enum.Font.SourceSans
+rgbbutton.Text = "False"
+rgbbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+rgbbutton.TextScaled = true
+rgbbutton.TextSize = 14.000
+rgbbutton.TextWrapped = true
+
+UICorner_13.Parent = rgbbutton
+
+disabless.Name = "disabless"
+disabless.Parent = SettinsFrame
+disabless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+disabless.BackgroundTransparency = 1.000
+disabless.Position = UDim2.new(0.0232142862, 0, 0.53356564, 0)
+disabless.Size = UDim2.new(0, 335, 0, 50)
+disabless.Font = Enum.Font.SourceSans
+disabless.Text = "Disable Startup Sound:"
+disabless.TextColor3 = Color3.fromRGB(255, 255, 255)
+disabless.TextScaled = true
+disabless.TextSize = 14.000
+disabless.TextWrapped = true
+disabless.TextXAlignment = Enum.TextXAlignment.Left
+
+soundbutton.Name = "soundbutton"
+soundbutton.Parent = SettinsFrame
+soundbutton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+soundbutton.Position = UDim2.new(0.660714269, 0, 0.53356564, 0)
+soundbutton.Size = UDim2.new(0, 162, 0, 50)
+soundbutton.AutoButtonColor = false
+soundbutton.Font = Enum.Font.SourceSans
+soundbutton.Text = "False"
+soundbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+soundbutton.TextScaled = true
+soundbutton.TextSize = 14.000
+soundbutton.TextWrapped = true
+
+UICorner_14.Parent = soundbutton
+
+destroybutton.Name = "destroybutton"
+destroybutton.Parent = SettinsFrame
+destroybutton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+destroybutton.BorderColor3 = Color3.fromRGB(47, 47, 47)
+destroybutton.BorderSizePixel = 0
+destroybutton.Position = UDim2.new(0.659739017, 0, 0.754805923, 0)
+destroybutton.Size = UDim2.new(0, 162, 0, 50)
+destroybutton.Font = Enum.Font.SourceSans
+destroybutton.Text = "Destroy"
+destroybutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+destroybutton.TextScaled = true
+destroybutton.TextSize = 14.000
+destroybutton.TextStrokeTransparency = 0.550
+destroybutton.TextWrapped = true
+
+UICorner_15.Parent = destroybutton
+
+TextLabel_3.Parent = SettinsFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0230496451, 0, 0.756097555, 0)
+TextLabel_3.Size = UDim2.new(0, 335, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Destroy The Gui:"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+SearchFrame.Name = "SearchFrame"
+SearchFrame.Parent = MainContainer
+SearchFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+SearchFrame.Position = UDim2.new(0.123000003, 0, 0.174999997, 0)
+SearchFrame.Size = UDim2.new(0, 564, 0, 287)
+SearchFrame.Visible = false
+
+playerMenu.Name = "playerMenu"
+playerMenu.Parent = SearchFrame
+playerMenu.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+playerMenu.Size = UDim2.new(0, 564, 0, 287)
+playerMenu.Visible = false
+
+blocks.Name = "blocks"
+blocks.Parent = playerMenu
+blocks.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+blocks.BackgroundTransparency = 1.000
+blocks.Position = UDim2.new(0, 0, 0.0645038784, 0)
+blocks.Size = UDim2.new(1, 0, 0.230000004, 0)
+blocks.Font = Enum.Font.SourceSans
+blocks.Text = "Blocks"
+blocks.TextColor3 = Color3.fromRGB(200, 200, 200)
+blocks.TextScaled = true
+blocks.TextSize = 14.000
+blocks.TextWrapped = true
+
+general.Name = "general"
+general.Parent = playerMenu
+general.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+general.BackgroundTransparency = 1.000
+general.Position = UDim2.new(-0.00411522621, 0, 0, 0)
+general.Size = UDim2.new(1, 0, 0.230000004, 0)
+general.Font = Enum.Font.SourceSans
+general.Text = "General"
+general.TextColor3 = Color3.fromRGB(200, 200, 200)
+general.TextScaled = true
+general.TextSize = 14.000
+general.TextWrapped = true
+
+saves.Name = "saves"
+saves.Parent = playerMenu
+saves.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+saves.BackgroundTransparency = 1.000
+saves.Position = UDim2.new(0, 0, 0.129007757, 0)
+saves.Size = UDim2.new(1, 0, 0.230000004, 0)
+saves.Font = Enum.Font.SourceSans
+saves.Text = "Saves"
+saves.TextColor3 = Color3.fromRGB(200, 200, 200)
+saves.TextScaled = true
+saves.TextSize = 14.000
+saves.TextWrapped = true
+
+UIListLayout_4.Parent = playerMenu
+UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_4.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_4.Padding = UDim.new(0, 10)
+
+alabel.Name = "alabel"
+alabel.Parent = playerMenu
+alabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+alabel.BackgroundTransparency = 1.000
+alabel.Position = UDim2.new(-0.18971622, 0, 1.26829267, 0)
+alabel.Size = UDim2.new(1, 0, 0.150000006, 0)
+alabel.Font = Enum.Font.SourceSans
+alabel.Text = "Player:"
+alabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+alabel.TextScaled = true
+alabel.TextSize = 14.000
+alabel.TextWrapped = true
+
+backbutton.Name = "backbutton"
+backbutton.Parent = SearchFrame
+backbutton.BackgroundTransparency = 1.000
+backbutton.Position = UDim2.new(0.918439746, 0, 0.0191637725, 0)
+backbutton.Size = UDim2.new(0, 35, 0, 35)
+backbutton.Visible = false
+backbutton.ZIndex = 2
+backbutton.Image = "rbxassetid://6764432408"
+backbutton.ImageRectOffset = Vector2.new(0, 550)
+backbutton.ImageRectSize = Vector2.new(50, 50)
+
+playersMenu.Name = "playersMenu"
+playersMenu.Parent = SearchFrame
+playersMenu.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+playersMenu.Size = UDim2.new(0, 564, 0, 287)
+playersMenu.Visible = false
+
+tb.Name = "tb"
+tb.Parent = playersMenu
+tb.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+tb.Position = UDim2.new(0.260638297, 0, 0.156794429, 0)
+tb.Size = UDim2.new(0, 370, 0, 25)
+tb.Visible = false
+tb.Font = Enum.Font.SourceSans
+tb.Text = ""
+tb.TextColor3 = Color3.fromRGB(255, 255, 255)
+tb.TextScaled = true
+tb.TextSize = 14.000
+tb.TextWrapped = true
+
+UICorner_16.Parent = tb
+
+al.Name = "al"
+al.Parent = playersMenu
+al.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+al.BackgroundTransparency = 1.000
+al.Position = UDim2.new(-0.18971622, 0, 1.26829267, 0)
+al.Size = UDim2.new(0, 200, 0, 25)
+al.Font = Enum.Font.SourceSans
+al.Text = "Players"
+al.TextColor3 = Color3.fromRGB(255, 255, 255)
+al.TextScaled = true
+al.TextSize = 14.000
+al.TextWrapped = true
+al.TextYAlignment = Enum.TextYAlignment.Bottom
+
+UIListLayout_5.Parent = playersMenu
+UIListLayout_5.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_5.Padding = UDim.new(0, 11)
+
+savesMenu.Name = "savesMenu"
+savesMenu.Parent = SearchFrame
+savesMenu.Active = true
+savesMenu.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+savesMenu.BorderColor3 = Color3.fromRGB(27, 42, 53)
+savesMenu.BorderSizePixel = 0
+savesMenu.Size = UDim2.new(0, 564, 0, 287)
+savesMenu.Visible = false
+savesMenu.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+UIGridLayoutSaves.Name = "UIGridLayoutSaves"
+UIGridLayoutSaves.Parent = savesMenu
+UIGridLayoutSaves.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayoutSaves.CellPadding = UDim2.new(0, 3, 0, 3)
+
+blocksMenu.Name = "blocksMenu"
+blocksMenu.Parent = SearchFrame
+blocksMenu.Active = true
+blocksMenu.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+blocksMenu.BorderColor3 = Color3.fromRGB(27, 42, 53)
+blocksMenu.BorderSizePixel = 0
+blocksMenu.Size = UDim2.new(0, 564, 0, 287)
+blocksMenu.Visible = false
+blocksMenu.CanvasSize = UDim2.new(0, 0, 10, 0)
+
+UIGridLayout.Parent = blocksMenu
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 124, 0, 120)
+
+generalMenu.Name = "generalMenu"
+generalMenu.Parent = SearchFrame
+generalMenu.Active = true
+generalMenu.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+generalMenu.BorderColor3 = Color3.fromRGB(27, 42, 53)
+generalMenu.BorderSizePixel = 0
+generalMenu.Size = UDim2.new(0, 564, 0, 287)
+generalMenu.Visible = false
+generalMenu.CanvasSize = UDim2.new(0, 0, 2.29999995, 0)
+
+bindToolLabel.Name = "bindToolLabel"
+bindToolLabel.Parent = generalMenu
+bindToolLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bindToolLabel.BackgroundTransparency = 1.000
+bindToolLabel.Position = UDim2.new(0.0246913582, 0, 0.0302584022, 0)
+bindToolLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+bindToolLabel.Font = Enum.Font.SourceSans
+bindToolLabel.Text = "Binding Tool: false"
+bindToolLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+bindToolLabel.TextScaled = true
+bindToolLabel.TextSize = 14.000
+bindToolLabel.TextWrapped = true
+
+blockJoinLabel.Name = "blockJoinLabel"
+blockJoinLabel.Parent = generalMenu
+blockJoinLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+blockJoinLabel.BackgroundTransparency = 1.000
+blockJoinLabel.LayoutOrder = 21
+blockJoinLabel.Position = UDim2.new(0.0246913582, 0, 0.104104936, 0)
+blockJoinLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+blockJoinLabel.Font = Enum.Font.SourceSans
+blockJoinLabel.Text = "Block Join Requests: false"
+blockJoinLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+blockJoinLabel.TextScaled = true
+blockJoinLabel.TextSize = 14.000
+blockJoinLabel.TextWrapped = true
+
+goldLabel.Name = "goldLabel"
+goldLabel.Parent = generalMenu
+goldLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldLabel.BackgroundTransparency = 1.000
+goldLabel.LayoutOrder = 1
+goldLabel.Position = UDim2.new(0.0246913582, 0, -2.74682407e-07, 0)
+goldLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+goldLabel.Font = Enum.Font.SourceSans
+goldLabel.Text = "Gold: 10"
+goldLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+goldLabel.TextScaled = true
+goldLabel.TextSize = 14.000
+goldLabel.TextWrapped = true
+
+goldMulLabel.Name = "goldMulLabel"
+goldMulLabel.Parent = generalMenu
+goldMulLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldMulLabel.BackgroundTransparency = 1.000
+goldMulLabel.LayoutOrder = 2
+goldMulLabel.Position = UDim2.new(0.0246913582, 0, 0.00441611512, 0)
+goldMulLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+goldMulLabel.Font = Enum.Font.SourceSans
+goldMulLabel.Text = "Gold Multiplier: 100%"
+goldMulLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+goldMulLabel.TextScaled = true
+goldMulLabel.TextSize = 14.000
+goldMulLabel.TextWrapped = true
+
+groupRankHiddenLabel.Name = "groupRankHiddenLabel"
+groupRankHiddenLabel.Parent = generalMenu
+groupRankHiddenLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+groupRankHiddenLabel.BackgroundTransparency = 1.000
+groupRankHiddenLabel.LayoutOrder = 4
+groupRankHiddenLabel.Position = UDim2.new(0.0246913582, 0, 0.0154570909, 0)
+groupRankHiddenLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+groupRankHiddenLabel.Font = Enum.Font.SourceSans
+groupRankHiddenLabel.Text = "Group Rank Hidden: false"
+groupRankHiddenLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+groupRankHiddenLabel.TextScaled = true
+groupRankHiddenLabel.TextSize = 14.000
+groupRankHiddenLabel.TextWrapped = true
+
+groupRankLabel.Name = "groupRankLabel"
+groupRankLabel.Parent = generalMenu
+groupRankLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+groupRankLabel.BackgroundTransparency = 1.000
+groupRankLabel.LayoutOrder = 3
+groupRankLabel.Position = UDim2.new(0.0246913582, 0, 0.0110567017, 0)
+groupRankLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+groupRankLabel.Font = Enum.Font.SourceSans
+groupRankLabel.Text = "Group Rank: <None>"
+groupRankLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+groupRankLabel.TextScaled = true
+groupRankLabel.TextSize = 14.000
+groupRankLabel.TextWrapped = true
+
+haveStarSlotLabel.Name = "haveStarSlotLabel"
+haveStarSlotLabel.Parent = generalMenu
+haveStarSlotLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+haveStarSlotLabel.BackgroundTransparency = 1.000
+haveStarSlotLabel.LayoutOrder = 10
+haveStarSlotLabel.Position = UDim2.new(0.0246913582, 0, 0.047523912, 0)
+haveStarSlotLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+haveStarSlotLabel.Font = Enum.Font.SourceSans
+haveStarSlotLabel.Text = "Star Slot: false"
+haveStarSlotLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+haveStarSlotLabel.TextScaled = true
+haveStarSlotLabel.TextSize = 14.000
+haveStarSlotLabel.TextWrapped = true
+
+idkBonusLabel.Name = "idkBonusLabel"
+idkBonusLabel.Parent = generalMenu
+idkBonusLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+idkBonusLabel.BackgroundTransparency = 1.000
+idkBonusLabel.LayoutOrder = 18
+idkBonusLabel.Position = UDim2.new(0.0246913582, 0, 0.0867274031, 0)
+idkBonusLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+idkBonusLabel.Font = Enum.Font.SourceSans
+idkBonusLabel.Text = "Bonus??: 0"
+idkBonusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+idkBonusLabel.TextScaled = true
+idkBonusLabel.TextSize = 14.000
+idkBonusLabel.TextWrapped = true
+
+paintToolLabel.Name = "paintToolLabel"
+paintToolLabel.Parent = generalMenu
+paintToolLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+paintToolLabel.BackgroundTransparency = 1.000
+paintToolLabel.LayoutOrder = 6
+paintToolLabel.Position = UDim2.new(0.0246913582, 0, 0.0258420035, 0)
+paintToolLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+paintToolLabel.Font = Enum.Font.SourceSans
+paintToolLabel.Text = "Painting Tool: false"
+paintToolLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+paintToolLabel.TextScaled = true
+paintToolLabel.TextSize = 14.000
+paintToolLabel.TextWrapped = true
+
+plushie1Label.Name = "plushie1Label"
+plushie1Label.Parent = generalMenu
+plushie1Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plushie1Label.BackgroundTransparency = 1.000
+plushie1Label.LayoutOrder = 13
+plushie1Label.Position = UDim2.new(0.0246913582, 0, 0.0647414327, 0)
+plushie1Label.Size = UDim2.new(0.94599998, 0, 0, 20)
+plushie1Label.Font = Enum.Font.SourceSans
+plushie1Label.Text = "Plushie 1: false"
+plushie1Label.TextColor3 = Color3.fromRGB(200, 200, 200)
+plushie1Label.TextScaled = true
+plushie1Label.TextSize = 14.000
+plushie1Label.TextWrapped = true
+
+plushie2Label.Name = "plushie2Label"
+plushie2Label.Parent = generalMenu
+plushie2Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plushie2Label.BackgroundTransparency = 1.000
+plushie2Label.LayoutOrder = 14
+plushie2Label.Position = UDim2.new(0.0246913582, 0, 0.0691578239, 0)
+plushie2Label.Size = UDim2.new(0.94599998, 0, 0, 20)
+plushie2Label.Font = Enum.Font.SourceSans
+plushie2Label.Text = "Plushie 2: false"
+plushie2Label.TextColor3 = Color3.fromRGB(200, 200, 200)
+plushie2Label.TextScaled = true
+plushie2Label.TextSize = 14.000
+plushie2Label.TextWrapped = true
+
+plushie3Label.Name = "plushie3Label"
+plushie3Label.Parent = generalMenu
+plushie3Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plushie3Label.BackgroundTransparency = 1.000
+plushie3Label.LayoutOrder = 15
+plushie3Label.Position = UDim2.new(0.0246913582, 0, 0.0735742152, 0)
+plushie3Label.Size = UDim2.new(0.94599998, 0, 0, 20)
+plushie3Label.Font = Enum.Font.SourceSans
+plushie3Label.Text = "Plushie 3: false"
+plushie3Label.TextColor3 = Color3.fromRGB(200, 200, 200)
+plushie3Label.TextScaled = true
+plushie3Label.TextSize = 14.000
+plushie3Label.TextWrapped = true
+
+plushie4Label.Name = "plushie4Label"
+plushie4Label.Parent = generalMenu
+plushie4Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plushie4Label.BackgroundTransparency = 1.000
+plushie4Label.LayoutOrder = 16
+plushie4Label.Position = UDim2.new(0.0246913582, 0, 0.0779906139, 0)
+plushie4Label.Size = UDim2.new(0.94599998, 0, 0, 20)
+plushie4Label.Font = Enum.Font.SourceSans
+plushie4Label.Text = "Plushie 4: false"
+plushie4Label.TextColor3 = Color3.fromRGB(200, 200, 200)
+plushie4Label.TextScaled = true
+plushie4Label.TextSize = 14.000
+plushie4Label.TextWrapped = true
+
+propertiesToolLabel.Name = "propertiesToolLabel"
+propertiesToolLabel.Parent = generalMenu
+propertiesToolLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+propertiesToolLabel.BackgroundTransparency = 1.000
+propertiesToolLabel.LayoutOrder = 8
+propertiesToolLabel.Position = UDim2.new(0.0246913582, 0, 0.0346747786, 0)
+propertiesToolLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+propertiesToolLabel.Font = Enum.Font.SourceSans
+propertiesToolLabel.Text = "Properties Tool: false"
+propertiesToolLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+propertiesToolLabel.TextScaled = true
+propertiesToolLabel.TextSize = 14.000
+propertiesToolLabel.TextWrapped = true
+
+pvpEnabledLabel.Name = "pvpEnabledLabel"
+pvpEnabledLabel.Parent = generalMenu
+pvpEnabledLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pvpEnabledLabel.BackgroundTransparency = 1.000
+pvpEnabledLabel.LayoutOrder = 19
+pvpEnabledLabel.Position = UDim2.new(0.0246913582, 0, 0.0952721536, 0)
+pvpEnabledLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+pvpEnabledLabel.Font = Enum.Font.SourceSans
+pvpEnabledLabel.Text = "PVP Enabled: false"
+pvpEnabledLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+pvpEnabledLabel.TextScaled = true
+pvpEnabledLabel.TextSize = 14.000
+pvpEnabledLabel.TextWrapped = true
+
+scaleToolLabel.Name = "scaleToolLabel"
+scaleToolLabel.Parent = generalMenu
+scaleToolLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scaleToolLabel.BackgroundTransparency = 1.000
+scaleToolLabel.LayoutOrder = 9
+scaleToolLabel.Position = UDim2.new(0.0246913582, 0, 0.0390911698, 0)
+scaleToolLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+scaleToolLabel.Font = Enum.Font.SourceSans
+scaleToolLabel.Text = "Scaling Tool: false"
+scaleToolLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+scaleToolLabel.TextScaled = true
+scaleToolLabel.TextSize = 14.000
+scaleToolLabel.TextWrapped = true
+
+shareBlocksLabel.Name = "shareBlocksLabel"
+shareBlocksLabel.Parent = generalMenu
+shareBlocksLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shareBlocksLabel.BackgroundTransparency = 1.000
+shareBlocksLabel.LayoutOrder = 20
+shareBlocksLabel.Position = UDim2.new(0.0246913582, 0, 0.0996885449, 0)
+shareBlocksLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+shareBlocksLabel.Font = Enum.Font.SourceSans
+shareBlocksLabel.Text = "Share Blocks: false"
+shareBlocksLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+shareBlocksLabel.TextScaled = true
+shareBlocksLabel.TextSize = 14.000
+shareBlocksLabel.TextWrapped = true
+
+shopStyleColorLabel.Name = "shopStyleColorLabel"
+shopStyleColorLabel.Parent = generalMenu
+shopStyleColorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shopStyleColorLabel.BackgroundTransparency = 1.000
+shopStyleColorLabel.LayoutOrder = 22
+shopStyleColorLabel.Position = UDim2.new(0.0246913545, 0, 0.112809703, 0)
+shopStyleColorLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+shopStyleColorLabel.Font = Enum.Font.SourceSans
+shopStyleColorLabel.Text = "Shop Style Color: Red"
+shopStyleColorLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+shopStyleColorLabel.TextScaled = true
+shopStyleColorLabel.TextSize = 14.000
+shopStyleColorLabel.TextWrapped = true
+
+shopStyleOutlineLabel.Name = "shopStyleOutlineLabel"
+shopStyleOutlineLabel.Parent = generalMenu
+shopStyleOutlineLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shopStyleOutlineLabel.BackgroundTransparency = 1.000
+shopStyleOutlineLabel.LayoutOrder = 23
+shopStyleOutlineLabel.Position = UDim2.new(0.0246913545, 0, 0.125354841, 0)
+shopStyleOutlineLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+shopStyleOutlineLabel.Font = Enum.Font.SourceSans
+shopStyleOutlineLabel.Text = "Shop Style Outline: false"
+shopStyleOutlineLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+shopStyleOutlineLabel.TextScaled = true
+shopStyleOutlineLabel.TextSize = 14.000
+shopStyleOutlineLabel.TextWrapped = true
+
+shopStyleTransLabel.Name = "shopStyleTransLabel"
+shopStyleTransLabel.Parent = generalMenu
+shopStyleTransLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shopStyleTransLabel.BackgroundTransparency = 1.000
+shopStyleTransLabel.LayoutOrder = 24
+shopStyleTransLabel.Position = UDim2.new(0.0246913545, 0, 0.12093845, 0)
+shopStyleTransLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+shopStyleTransLabel.Font = Enum.Font.SourceSans
+shopStyleTransLabel.Text = "Shop Style Transparency: false"
+shopStyleTransLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+shopStyleTransLabel.TextScaled = true
+shopStyleTransLabel.TextSize = 14.000
+shopStyleTransLabel.TextWrapped = true
+
+shopStyleWoodLabel.Name = "shopStyleWoodLabel"
+shopStyleWoodLabel.Parent = generalMenu
+shopStyleWoodLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shopStyleWoodLabel.BackgroundTransparency = 1.000
+shopStyleWoodLabel.LayoutOrder = 24
+shopStyleWoodLabel.Position = UDim2.new(0.0246913545, 0, 0.117226109, 0)
+shopStyleWoodLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+shopStyleWoodLabel.Font = Enum.Font.SourceSans
+shopStyleWoodLabel.Text = "Shop Style Background: <None>"
+shopStyleWoodLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+shopStyleWoodLabel.TextScaled = true
+shopStyleWoodLabel.TextSize = 14.000
+shopStyleWoodLabel.TextWrapped = true
+
+spiderBossLabel.Name = "spiderBossLabel"
+spiderBossLabel.Parent = generalMenu
+spiderBossLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spiderBossLabel.BackgroundTransparency = 1.000
+spiderBossLabel.LayoutOrder = 12
+spiderBossLabel.Position = UDim2.new(0.0246913582, 0, 0.0604850575, 0)
+spiderBossLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+spiderBossLabel.Font = Enum.Font.SourceSans
+spiderBossLabel.Text = "Spider Boss beaten: false"
+spiderBossLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+spiderBossLabel.TextScaled = true
+spiderBossLabel.TextSize = 14.000
+spiderBossLabel.TextWrapped = true
+
+visitsLabel.Name = "visitsLabel"
+visitsLabel.Parent = generalMenu
+visitsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+visitsLabel.BackgroundTransparency = 1.000
+visitsLabel.LayoutOrder = 5
+visitsLabel.Position = UDim2.new(0.0246913582, 0, 0.0198894795, 0)
+visitsLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+visitsLabel.Font = Enum.Font.SourceSans
+visitsLabel.Text = "Total Visits: 1"
+visitsLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+visitsLabel.TextScaled = true
+visitsLabel.TextSize = 14.000
+visitsLabel.TextWrapped = true
+
+zegBossLabel.Name = "zegBossLabel"
+zegBossLabel.Parent = generalMenu
+zegBossLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zegBossLabel.BackgroundTransparency = 1.000
+zegBossLabel.LayoutOrder = 11
+zegBossLabel.Position = UDim2.new(0.0246913265, 0, 0.0560846739, 0)
+zegBossLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+zegBossLabel.Font = Enum.Font.SourceSans
+zegBossLabel.Text = "Zeg Boss beaten: false"
+zegBossLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+zegBossLabel.TextScaled = true
+zegBossLabel.TextSize = 14.000
+zegBossLabel.TextWrapped = true
+
+TNTbonusLabel.Name = "TNTbonusLabel"
+TNTbonusLabel.Parent = generalMenu
+TNTbonusLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TNTbonusLabel.BackgroundTransparency = 1.000
+TNTbonusLabel.LayoutOrder = 17
+TNTbonusLabel.Position = UDim2.new(-0.00367736816, 0, 0.207746565, 0)
+TNTbonusLabel.Size = UDim2.new(0.94599998, 0, 0, 20)
+TNTbonusLabel.Font = Enum.Font.SourceSans
+TNTbonusLabel.Text = "TNT Bonus: false"
+TNTbonusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+TNTbonusLabel.TextScaled = true
+TNTbonusLabel.TextSize = 14.000
+TNTbonusLabel.TextWrapped = true
+
+UIListLayout_6.Parent = generalMenu
+UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_6.Padding = UDim.new(0, 6)
+
+Slot.Name = "Slot"
+Slot.Parent = SearchFrame
+Slot.BackgroundColor3 = Color3.fromRGB(222, 222, 222)
+Slot.BackgroundTransparency = 1.000
+Slot.LayoutOrder = 1
+Slot.Size = UDim2.new(0, 75, 0, 75)
+Slot.Visible = false
+Slot.Image = "rbxassetid://3985626217"
+Slot.ImageColor3 = Color3.fromRGB(57, 136, 69)
+
+UIAspectRatioConstraint.Parent = Slot
+
+SlotStarImage.Name = "SlotStarImage"
+SlotStarImage.Parent = Slot
+SlotStarImage.AnchorPoint = Vector2.new(0.5, 0.5)
+SlotStarImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SlotStarImage.BackgroundTransparency = 1.000
+SlotStarImage.Position = UDim2.new(0.5, 0, 0.600000024, 0)
+SlotStarImage.Size = UDim2.new(0.25, 0, 0.25, 0)
+SlotStarImage.Visible = false
+SlotStarImage.ZIndex = 3
+SlotStarImage.Image = "http://www.roblox.com/asset/?id=3986070270"
+
+SlotName.Name = "SlotName"
+SlotName.Parent = Slot
+SlotName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SlotName.BackgroundTransparency = 1.000
+SlotName.Position = UDim2.new(0.150000006, 0, 0.150000006, 0)
+SlotName.Size = UDim2.new(0.699999988, 0, 0.25, 0)
+SlotName.ZIndex = 2
+SlotName.Font = Enum.Font.GothamBlack
+SlotName.TextColor3 = Color3.fromRGB(216, 216, 216)
+SlotName.TextScaled = true
+SlotName.TextSize = 14.000
+SlotName.TextWrapped = true
+
+itemTemplate.Name = "itemTemplate"
+itemTemplate.Parent = SearchFrame
+itemTemplate.BackgroundColor3 = Color3.fromRGB(64, 99, 255)
+itemTemplate.BorderSizePixel = 0
+itemTemplate.Size = UDim2.new(0, 100, 0, 100)
+itemTemplate.Visible = false
+
+itemTemplateName.Name = "itemTemplateName"
+itemTemplateName.Parent = itemTemplate
+itemTemplateName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+itemTemplateName.BackgroundTransparency = 1.000
+itemTemplateName.Size = UDim2.new(0.999999642, 0, 0.296207309, 0)
+itemTemplateName.Font = Enum.Font.SourceSans
+itemTemplateName.Text = "WoodBlock"
+itemTemplateName.TextColor3 = Color3.fromRGB(200, 200, 200)
+itemTemplateName.TextScaled = true
+itemTemplateName.TextSize = 14.000
+itemTemplateName.TextWrapped = true
+
+itemTemplateCount.Name = "itemTemplateCount"
+itemTemplateCount.Parent = itemTemplate
+itemTemplateCount.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+itemTemplateCount.BackgroundTransparency = 1.000
+itemTemplateCount.Position = UDim2.new(0, 0, 0.683555365, 0)
+itemTemplateCount.Size = UDim2.new(0.999999642, 0, 0.296207309, 0)
+itemTemplateCount.Font = Enum.Font.SourceSans
+itemTemplateCount.Text = "0"
+itemTemplateCount.TextColor3 = Color3.fromRGB(200, 200, 200)
+itemTemplateCount.TextScaled = true
+itemTemplateCount.TextSize = 14.000
+itemTemplateCount.TextWrapped = true
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = MainContainer
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.122727275, 0, 0.174999997, 0)
+MainFrame.Size = UDim2.new(0, 564, 0, 287)
+MainFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+WelcomeLabel.Name = "WelcomeLabel"
+WelcomeLabel.Parent = MainFrame
+WelcomeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeLabel.BackgroundTransparency = 1.000
+WelcomeLabel.Position = UDim2.new(0.0395196117, 0, 0.0522648096, 0)
+WelcomeLabel.Size = UDim2.new(0, 519, 0, 35)
+WelcomeLabel.Font = Enum.Font.SourceSans
+WelcomeLabel.Text = "Welcome to Astra Hub, N/A"
+WelcomeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeLabel.TextScaled = true
+WelcomeLabel.TextSize = 14.000
+WelcomeLabel.TextWrapped = true
+
+CreditLabel.Name = "CreditLabel"
+CreditLabel.Parent = MainFrame
+CreditLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditLabel.BackgroundTransparency = 1.000
+CreditLabel.BorderSizePixel = 0
+CreditLabel.Position = UDim2.new(0.0460992903, 0, 0.912891984, 0)
+CreditLabel.Size = UDim2.new(0, 512, 0, 18)
+CreditLabel.Font = Enum.Font.SourceSans
+CreditLabel.Text = "Made by Em4an3el#9617 | Press N/A to Show/Hide | V4.5"
+CreditLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditLabel.TextScaled = true
+CreditLabel.TextSize = 14.000
+CreditLabel.TextWrapped = true
+CreditLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+
+JoinServerButton.Name = "JoinServerButton"
+JoinServerButton.Parent = MainFrame
+JoinServerButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+JoinServerButton.Position = UDim2.new(0.46204567, 0, 0.74216038, 0)
+JoinServerButton.Size = UDim2.new(0, 293, 0, 33)
+JoinServerButton.Font = Enum.Font.SourceSans
+JoinServerButton.Text = "Join Server"
+JoinServerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JoinServerButton.TextScaled = true
+JoinServerButton.TextSize = 14.000
+JoinServerButton.TextWrapped = true
+
+UICorner_17.Parent = JoinServerButton
+
+FeaturesLabel.Name = "FeaturesLabel"
+FeaturesLabel.Parent = MainFrame
+FeaturesLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FeaturesLabel.BackgroundTransparency = 1.000
+FeaturesLabel.Position = UDim2.new(0.0187832452, 0, 0.74216038, 0)
+FeaturesLabel.Size = UDim2.new(0, 250, 0, 33)
+FeaturesLabel.Font = Enum.Font.SourceSans
+FeaturesLabel.Text = "Having some issues with the script? Join our discord server."
+FeaturesLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+FeaturesLabel.TextScaled = true
+FeaturesLabel.TextSize = 14.000
+FeaturesLabel.TextWrapped = true
+FeaturesLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+ChatFrame.Name = "ChatFrame"
+ChatFrame.Parent = MainContainer
+ChatFrame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+ChatFrame.BorderSizePixel = 0
+ChatFrame.Position = UDim2.new(0.123000003, 0, 0.174999997, 0)
+ChatFrame.Size = UDim2.new(0, 564, 0, 287)
+ChatFrame.Visible = false
+
+ChatHolder.Name = "ChatHolder"
+ChatHolder.Parent = ChatFrame
+ChatHolder.Active = true
+ChatHolder.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+ChatHolder.BackgroundTransparency = 1.000
+ChatHolder.BorderSizePixel = 0
+ChatHolder.Position = UDim2.new(0.00177304959, 0, 0, 0)
+ChatHolder.Size = UDim2.new(0, 562, 0, 240)
+ChatHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+UIListLayout_7.Parent = ChatHolder
+UIListLayout_7.VerticalAlignment = Enum.VerticalAlignment.Bottom
+UIListLayout_7.Padding = UDim.new(0, 5)
+
+ChatModule.Name = "ChatModule"
+ChatModule.Parent = ChatFrame
+ChatModule.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+ChatModule.BackgroundTransparency = 1.000
+ChatModule.Position = UDim2.new(0, 0, 0.390243858, 0)
+ChatModule.Size = UDim2.new(0, 418, 0, 50)
+ChatModule.Visible = false
+
+UsernameLabel.Name = "UsernameLabel"
+UsernameLabel.Parent = ChatModule
+UsernameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UsernameLabel.BackgroundTransparency = 1.000
+UsernameLabel.BorderSizePixel = 0
+UsernameLabel.Position = UDim2.new(0.150000036, 0, 0.140000001, 0)
+UsernameLabel.Size = UDim2.new(0, 95, 0, 15)
+UsernameLabel.Font = Enum.Font.SourceSans
+UsernameLabel.Text = "< Player_Name >"
+UsernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+UsernameLabel.TextScaled = true
+UsernameLabel.TextSize = 15.000
+UsernameLabel.TextWrapped = true
+UsernameLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+TimeLabel.Name = "TimeLabel"
+TimeLabel.Parent = UsernameLabel
+TimeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TimeLabel.BackgroundTransparency = 1.000
+TimeLabel.BorderSizePixel = 0
+TimeLabel.Position = UDim2.new(0.996999979, 0, -0.0666666701, 0)
+TimeLabel.Size = UDim2.new(0, 80, 0, 15)
+TimeLabel.Font = Enum.Font.SourceSans
+TimeLabel.Text = "at < Time >"
+TimeLabel.TextColor3 = Color3.fromRGB(94, 94, 94)
+TimeLabel.TextSize = 14.000
+TimeLabel.TextStrokeColor3 = Color3.fromRGB(67, 67, 67)
+TimeLabel.TextWrapped = true
+TimeLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+MessageLabel.Name = "MessageLabel"
+MessageLabel.Parent = ChatModule
+MessageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MessageLabel.BackgroundTransparency = 1.000
+MessageLabel.BorderSizePixel = 0
+MessageLabel.Position = UDim2.new(0.150000036, 0, 0.439999998, 0)
+MessageLabel.Size = UDim2.new(0, 490, 0, 20)
+MessageLabel.Font = Enum.Font.SourceSans
+MessageLabel.Text = "< Player_Message >"
+MessageLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+MessageLabel.TextSize = 16.000
+MessageLabel.TextWrapped = true
+MessageLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+ProfilePictureHolder.Name = "ProfilePictureHolder"
+ProfilePictureHolder.Parent = ChatModule
+ProfilePictureHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ProfilePictureHolder.Position = UDim2.new(0.0358851664, 0, 0.159999862, 0)
+ProfilePictureHolder.Size = UDim2.new(0, 34, 0, 34)
+
+UICorner_18.CornerRadius = UDim.new(0, 32)
+UICorner_18.Parent = ProfilePictureHolder
+
+ProfilePicture.Name = "ProfilePicture"
+ProfilePicture.Parent = ProfilePictureHolder
+ProfilePicture.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ProfilePicture.BackgroundTransparency = 1.000
+ProfilePicture.Position = UDim2.new(0, 1, 0, 1)
+ProfilePicture.Size = UDim2.new(0, 32, 0, 32)
+ProfilePicture.Image = "rbxassetid://9351355847"
+
+UICorner_19.CornerRadius = UDim.new(0, 32)
+UICorner_19.Parent = ProfilePicture
+
+ChatBox.Name = "ChatBox"
+ChatBox.Parent = ChatFrame
+ChatBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ChatBox.BackgroundTransparency = 1.000
+ChatBox.BorderSizePixel = 0
+ChatBox.Position = UDim2.new(0.00177304959, 0, 0.84668988, 0)
+ChatBox.Size = UDim2.new(0, 561, 0, 44)
+ChatBox.ClearTextOnFocus = false
+ChatBox.Font = Enum.Font.SourceSans
+ChatBox.PlaceholderText = "Send a message in ┊🌐・universal-chat | Press , to focus"
+ChatBox.Text = ""
+ChatBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ChatBox.TextSize = 15.000
+ChatBox.TextWrapped = true
+
+Sep.Name = "Sep"
+Sep.Parent = ChatFrame
+Sep.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Sep.BorderSizePixel = 0
+Sep.Position = UDim2.new(-0.000319135957, 0, 0.84668988, 0)
+Sep.Size = UDim2.new(0, 564, 0, 2)
+
+MaxChars.Name = "MaxChars"
+MaxChars.Parent = ChatFrame
+MaxChars.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MaxChars.BackgroundTransparency = 1.000
+MaxChars.BorderSizePixel = 0
+MaxChars.Position = UDim2.new(0.892836869, 0, 0.0367687494, 0)
+MaxChars.Size = UDim2.new(0, 50, 0, 15)
+MaxChars.Visible = false
+MaxChars.Font = Enum.Font.SourceSans
+MaxChars.Text = "0/60"
+MaxChars.TextColor3 = Color3.fromRGB(255, 255, 255)
+MaxChars.TextSize = 16.000
+
+TitleBar.Name = "TitleBar"
+TitleBar.Parent = MainContainer
+TitleBar.Active = true
+TitleBar.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+TitleBar.BorderSizePixel = 0
+TitleBar.Position = UDim2.new(0.122727275, 0, 0.027777778, 0)
+TitleBar.Selectable = true
+TitleBar.Size = UDim2.new(0, 564, 0, 43)
+TitleBar.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+TitleBar.ImageTransparency = 1.000
+
+HubName.Name = "HubName"
+HubName.Parent = TitleBar
+HubName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HubName.BackgroundTransparency = 1.000
+HubName.BorderSizePixel = 0
+HubName.Size = UDim2.new(0, 564, 0, 25)
+HubName.Font = Enum.Font.SourceSans
+HubName.Text = "Astra Hub"
+HubName.TextColor3 = Color3.fromRGB(255, 255, 255)
+HubName.TextScaled = true
+HubName.TextSize = 14.000
+HubName.TextWrapped = true
+
+GameTitle.Name = "GameTitle"
+GameTitle.Parent = TitleBar
+GameTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameTitle.BackgroundTransparency = 1.000
+GameTitle.BorderSizePixel = 0
+GameTitle.Position = UDim2.new(0, 0, 0.581395328, 0)
+GameTitle.Size = UDim2.new(0, 564, 0, 18)
+GameTitle.Font = Enum.Font.SourceSans
+GameTitle.Text = "Build A Boat For Treasure"
+GameTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameTitle.TextScaled = true
+GameTitle.TextSize = 14.000
+GameTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+GameTitle.TextWrapped = true
+
+UICorner_20.Parent = TitleBar
+
+UICorner_21.CornerRadius = UDim.new(0, 15)
+UICorner_21.Parent = MainRgbFrame
+
+KeyFrame.Name = "KeyFrame"
+KeyFrame.Parent = AstraHub
+KeyFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyFrame.Position = UDim2.new(0.263829768, 0, 0.227340251, 0)
+KeyFrame.Size = UDim2.new(0, 666, 0, 366)
+KeyFrame.Visible = false
+
+UICorner_22.CornerRadius = UDim.new(0, 15)
+UICorner_22.Parent = KeyFrame
+
+Container.Name = "Container"
+Container.Parent = KeyFrame
+Container.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Container.Position = UDim2.new(0.00450450461, 0, 0.00819672085, 0)
+Container.Size = UDim2.new(0, 660, 0, 360)
+
+UICorner_23.CornerRadius = UDim.new(0, 15)
+UICorner_23.Parent = Container
+
+TextBox.Parent = Container
+TextBox.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+TextBox.BorderColor3 = Color3.fromRGB(63, 63, 63)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.245362714, 0, 0.429787695, 0)
+TextBox.Size = UDim2.new(0, 335, 0, 50)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSansBold
+TextBox.PlaceholderColor3 = Color3.fromRGB(212, 212, 212)
+TextBox.PlaceholderText = "Insert Key"
+TextBox.ShowNativeInput = false
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(212, 212, 212)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextStrokeColor3 = Color3.fromRGB(42, 42, 42)
+TextBox.TextWrapped = true
+
+UICorner_24.Parent = TextBox
+
+DowntitleLabel.Name = "DowntitleLabel"
+DowntitleLabel.Parent = Container
+DowntitleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DowntitleLabel.BackgroundTransparency = 2.000
+DowntitleLabel.Position = UDim2.new(0, 0, 0.903276384, 0)
+DowntitleLabel.Size = UDim2.new(0, 659, 0, 25)
+DowntitleLabel.Font = Enum.Font.SourceSansBold
+DowntitleLabel.Text = "Build A Boat For Treasure | No linkvertise on our discord | v4.5"
+DowntitleLabel.TextColor3 = Color3.fromRGB(147, 147, 147)
+DowntitleLabel.TextScaled = true
+DowntitleLabel.TextSize = 14.000
+DowntitleLabel.TextWrapped = true
+
+KeyEmoji.Name = "KeyEmoji"
+KeyEmoji.Parent = Container
+KeyEmoji.Active = false
+KeyEmoji.BackgroundTransparency = 1.000
+KeyEmoji.BorderSizePixel = 0
+KeyEmoji.Position = UDim2.new(0.951579809, 0, 0.903276443, 0)
+KeyEmoji.Selectable = false
+KeyEmoji.Size = UDim2.new(0, 24, 0, 25)
+KeyEmoji.ZIndex = 2
+KeyEmoji.AutoButtonColor = false
+KeyEmoji.Image = "rbxassetid://6764432293"
+KeyEmoji.ImageRectOffset = Vector2.new(200, 300)
+KeyEmoji.ImageRectSize = Vector2.new(100, 100)
+
+LinkvertiseLink.Name = "LinkvertiseLink"
+LinkvertiseLink.Parent = Container
+LinkvertiseLink.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LinkvertiseLink.BorderSizePixel = 0
+LinkvertiseLink.Position = UDim2.new(0.560514212, 0, 0.749597669, 0)
+LinkvertiseLink.Size = UDim2.new(0, 200, 0, 40)
+LinkvertiseLink.ZIndex = 2
+LinkvertiseLink.Font = Enum.Font.GothamMedium
+LinkvertiseLink.Text = "On Linkvertise"
+LinkvertiseLink.TextColor3 = Color3.fromRGB(147, 147, 147)
+LinkvertiseLink.TextScaled = true
+LinkvertiseLink.TextSize = 14.000
+LinkvertiseLink.TextWrapped = true
+
+UICorner_25.Parent = LinkvertiseLink
+
+LabelContainer.Name = "LabelContainer"
+LabelContainer.Parent = Container
+LabelContainer.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LabelContainer.Position = UDim2.new(0.0530303009, 0, 0.0416666679, 0)
+LabelContainer.Size = UDim2.new(0, 590, 0, 80)
+
+name.Name = "name"
+name.Parent = LabelContainer
+name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+name.BackgroundTransparency = 2.000
+name.Position = UDim2.new(-0.00120704784, 0, 0, 0)
+name.Size = UDim2.new(0, 590, 0, 40)
+name.Font = Enum.Font.SourceSansBold
+name.Text = "Astra Hub"
+name.TextColor3 = Color3.fromRGB(212, 212, 212)
+name.TextScaled = true
+name.TextSize = 14.000
+name.TextWrapped = true
+
+keyreq.Name = "keyreq"
+keyreq.Parent = LabelContainer
+keyreq.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keyreq.BackgroundTransparency = 1.000
+keyreq.Position = UDim2.new(0.214854196, 0, 0.5, 0)
+keyreq.Size = UDim2.new(0, 335, 0, 33)
+keyreq.Font = Enum.Font.SourceSans
+keyreq.Text = "Key required"
+keyreq.TextColor3 = Color3.fromRGB(255, 255, 255)
+keyreq.TextScaled = true
+keyreq.TextSize = 14.000
+keyreq.TextWrapped = true
+
+UICorner_26.Parent = LabelContainer
+
+DiscordLink.Name = "DiscordLink"
+DiscordLink.Parent = Container
+DiscordLink.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+DiscordLink.BorderSizePixel = 0
+DiscordLink.Position = UDim2.new(0.137786925, 0, 0.749597669, 0)
+DiscordLink.Size = UDim2.new(0, 200, 0, 40)
+DiscordLink.ZIndex = 2
+DiscordLink.Font = Enum.Font.GothamMedium
+DiscordLink.Text = "Our Discord Server"
+DiscordLink.TextColor3 = Color3.fromRGB(147, 147, 147)
+DiscordLink.TextScaled = true
+DiscordLink.TextSize = 14.000
+DiscordLink.TextWrapped = true
+
+UICorner_27.Parent = DiscordLink
+
+HowToGetKey.Name = "HowToGetKey"
+HowToGetKey.Parent = Container
+HowToGetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HowToGetKey.BackgroundTransparency = 1.000
+HowToGetKey.Position = UDim2.new(0.374242425, 0, 0.608333349, 0)
+HowToGetKey.Size = UDim2.new(0, 165, 0, 35)
+HowToGetKey.Font = Enum.Font.SourceSans
+HowToGetKey.Text = "Get key on:"
+HowToGetKey.TextColor3 = Color3.fromRGB(147, 147, 147)
+HowToGetKey.TextScaled = true
+HowToGetKey.TextSize = 14.000
+HowToGetKey.TextStrokeColor3 = Color3.fromRGB(99, 99, 99)
+HowToGetKey.TextWrapped = true
+
+HowToGetKey_2.Name = "HowToGetKey"
+HowToGetKey_2.Parent = Container
+HowToGetKey_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HowToGetKey_2.BackgroundTransparency = 1.000
+HowToGetKey_2.Position = UDim2.new(0.440817267, 0, 0.752375484, 0)
+HowToGetKey_2.Size = UDim2.new(0, 78, 0, 39)
+HowToGetKey_2.Font = Enum.Font.SourceSans
+HowToGetKey_2.Text = "or"
+HowToGetKey_2.TextColor3 = Color3.fromRGB(147, 147, 147)
+HowToGetKey_2.TextScaled = true
+HowToGetKey_2.TextSize = 14.000
+HowToGetKey_2.TextStrokeColor3 = Color3.fromRGB(99, 99, 99)
+HowToGetKey_2.TextWrapped = true
 
 -- Scripts:
 
-local function JVMJVQ_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+local function AIVFY_fake_script() -- SideBar.sidebarscript 
+	local script = Instance.new('LocalScript', SideBar)
 
-	script.Parent.MouseButton1Down:connect(function()
-	if script.Parent.Text == "Open" then
-		script.Parent.Text = "Close"
-		script.Parent.Parent.Frame.Visible = true
-	else
-		script.Parent.Text = "Open"
-		script.Parent.Parent.Frame.Visible = false
-		
+	local frames = {
+		script.Parent.Parent.MainFrame,
+		script.Parent.Parent.PlayerFrame,
+		script.Parent.Parent.AutoBuyFrame,
+		script.Parent.Parent.TeleportsFrame,
+		script.Parent.Parent.UtilitiesFrame,
+		script.Parent.Parent.SettinsFrame,
+		script.Parent.Parent.SearchFrame,
+		script.Parent.Parent.SearchFrame.playersMenu,
+		script.Parent.Parent.SearchFrame.playerMenu,
+		script.Parent.Parent.SearchFrame.generalMenu,
+		script.Parent.Parent.SearchFrame.blocksMenu,
+		script.Parent.Parent.SearchFrame.savesMenu,
+		script.Parent.Parent.ChatFrame
+	}
+	script.Parent.HomeButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
 		end
-		end)
-end
-coroutine.wrap(JVMJVQ_fake_script)()
-local function HVFIHRD_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
-
-	local Humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-	script.Parent.MouseButton1Down:connect(function()
-	for i = 1, tonumber(script.Parent.Parent.TextBox.Text),1 do
-		local args = {
-			[1] = "Cannon",
-			[2] = 1
-		}
-	
-		workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)	
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
 		end
-		if script.Parent.Parent.Parent.dbutton.Text == "True" then
-		wait(1.5)
-			game.Players.LocalPlayer.Character.Humanoid.Health = 0	
+		script.Parent.Parent.MainFrame.Visible = true
+		script.Parent.HomeButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.HomeButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.PlayerButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
 		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.PlayerFrame.Visible = true
+		script.Parent.PlayerButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.PlayerButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.AutoBuyButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
+		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.AutoBuyFrame.Visible = true
+		script.Parent.AutoBuyButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.AutoBuyButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.TeleportsButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
+		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)	
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.TeleportsFrame.Visible = true
+		script.Parent.TeleportsButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.TeleportsButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.UtilityButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
+		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.UtilitiesFrame.Visible = true
+		script.Parent.UtilityButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.UtilityButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.SearchButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
+		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.SearchFrame.Visible = true
+		script.Parent.Parent.SearchFrame.playersMenu.Visible = true
+		script.Parent.SearchButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.SearchButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.ChatButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
+		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)	
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.ChatFrame.Visible = true
+		script.Parent.ChatButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.ChatButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
+	end)
+	script.Parent.SettingsButton.MouseButton1Down:connect(function()
+		for i,v in pairs(frames) do
+			v.Visible = false
+		end
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("ImageButton") then
+				v.ImageColor3 = Color3.fromRGB(190, 190, 190)	
+				v:TweenSize(UDim2.new(0, 35,0, 33),"Out","Sine",0.1,true)
+			end
+		end
+		script.Parent.Parent.SettinsFrame.Visible = true
+		script.Parent.SettingsButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		script.Parent.SettingsButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
 	end)
 end
-coroutine.wrap(HVFIHRD_fake_script)()
-local function BQDYHXS_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(AIVFY_fake_script)()
+local function KJAEUKW_fake_script() -- UtilitiesFrame.utilitiesscript 
+	local script = Instance.new('LocalScript', UtilitiesFrame)
 
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0
-	local dragStart = nil
-	local startPos = nil
+	local tool = Instance.new("Tool")
+	local Rej
 	
-	local function updateInput(input)
 	
-		local delta = input.Position - dragStart
-	
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-	
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	
+	if identifyexecutor() == "Fluxus" then
+		Rej = fluxus.queue_on_teleport 
+	elseif identifyexecutor() == "Synapse X" then
+		Rej = syn.queue_on_teleport
+	else
+		Rej = queue_on_teleport
 	end
 	
-	
-	
-	frame.InputBegan:Connect(function(input)
-	
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-	
-			dragToggle = true
-	
-			dragStart = input.Position
-	
-			startPos = frame.Position
-	
-			input.Changed:Connect(function()
-	
-				if input.UserInputState == Enum.UserInputState.End then
-	
-					dragToggle = false
-	
-				end
-	
-			end)
-	
+	script.Parent.winterplace.MouseButton1Down:connect(function()
+		if Rej then
+		Rej('loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()')
 		end
-	
+		game:GetService("TeleportService"):Teleport(1930866268) 
+	end)
+	script.Parent.spidybf.MouseButton1Down:connect(function()
+		if Rej then
+			Rej('loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()')
+		end
+		game:GetService("TeleportService"):Teleport(1930665568) 
+	end)
+	script.Parent.easterevent.MouseButton1Down:connect(function()
+		if Rej then
+			Rej('loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()')
+		end
+		game:GetService("TeleportService"):Teleport(1930863474) 
 	end)
 	
+	script.Parent.servhopbutton.MouseButton1Down:connect(function()
+		if Rej then
+			Rej('loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()')
+		end
+		local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+		module:Teleport(game.PlaceId)
+	end)
+	script.Parent.rejoinbutton.MouseButton1Down:connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Rejoining";
+			Duration = "10";
+		})
+		Rej('loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()')
+		game:service("TeleportService"):Teleport(game.PlaceId)
+		wait(4)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Rejoining failed, retrying";
+			Duration = "10";
+		})
+		game:service("TeleportService"):Teleport(game.PlaceId)
+		wait(4)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Rejoining failed, you will have to leave and rejoin";
+			Duration = "10";
+		})
+	end)
+	
+	script.Parent.tptoolbutton.MouseButton1Down:connect(function()
+		tool.RequiresHandle = false
+		tool.Name = "Click Teleport"
+		tool.Activated:connect(function()
+			local pos = game.Players.LocalPlayer:GetMouse().Hit + Vector3.new(0,2.5,0)
+			pos = CFrame.new(pos.X,pos.Y,pos.Z)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+		end)
+		tool.Parent = game.Players.LocalPlayer.Backpack
+	end)
+	script.Parent.redeemcodesbutton.MouseButton1Down:connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Redeeming all the codes";
+			Duration = "10";
+		})
+	
+		local args = {
+			[1] = "hi"
+		}
+		workspace.CheckCodeFunction:InvokeServer(unpack(args))
+	
+		local args = {
+			[1] = "Squid Army"
+		}
+		workspace.CheckCodeFunction:InvokeServer(unpack(args))
+		local args = {
+			[1] = "=D"
+		}
+		workspace.CheckCodeFunction:InvokeServer(unpack(args))
+		local args = {
+			[1] = "=P"
+		}
+		workspace.CheckCodeFunction:InvokeServer(unpack(args))
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Redeemed all the codes";
+			Duration = "10";
+		})
+	end)
+	script.Parent.fabbyquest.MouseButton1Down:connect(function()
+	local args = {
+	[1] = 100
+	}
+	workspace.QuestMakerEvent:FireServer(unpack(args))
+	end)
+	script.Parent.gingfight.MouseButton1Down:connect(function()
+		local args = {
+			[1] = 99
+		}
+		workspace.QuestMakerEvent:FireServer(unpack(args))
+	end)
+	script.Parent.invasion.MouseButton1Down:connect(function()
+		local args = {
+			[1] = 101
+		}
+		workspace.QuestMakerEvent:FireServer(unpack(args))
+	end)
+	
+	script.Parent.autofarmbutton.MouseButton1Down:connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Enabled. Rejoin game to toggle off";
+			Duration = "10";
+		})
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+		local Tween
+		function Tween(time,pos)
+			pcall(function()
+				workspace.Gravity = 0
+				game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear), {CFrame = pos}):Play() wait(time)
+				workspace.Gravity = 196.2
+			end)
+		end
+		local Repeat
+		function Repeat()
+			Tween(1.75,game:GetService("Workspace").BoatStages.NormalStages.CaveStage1.DarknessPart.CFrame)
+			Tween(18.42,game:GetService("Workspace").BoatStages.NormalStages.CaveStage10.DarknessPart.CFrame)
+			Tween(0.062,game:GetService("Workspace").BoatStages.NormalStages.TheEnd.GoldenChest.Trigger.CFrame + Vector3.new(0, 1, -5))
+		end
+		game.Players.LocalPlayer.CharacterAdded:Connect(function(c)
+			if c.Name == game.Players.LocalPlayer.Name then
+				wait(4)
+				Repeat()
+			end
+		end)
+		Repeat()
+	
+	end)
+end
+coroutine.wrap(KJAEUKW_fake_script)()
+local function NEUIOAY_fake_script() -- walkspeedsliderbar.LocalScript 
+	local script = Instance.new('LocalScript', walkspeedsliderbar)
+
+	local UserInputService = game:GetService("UserInputService")
+	local Dragging = false
+	script.Parent.sliderbutton.MouseButton1Down:Connect(function()
+		Dragging = true
+	end)
+	
+	UserInputService.InputChanged:Connect(function()
+	
+		if Dragging then
+			local MousePos = UserInputService:GetMouseLocation()+Vector2.new(0,36)
+			local RelPos = MousePos-script.Parent.AbsolutePosition
+			local Precent = math.clamp(RelPos.X/script.Parent.AbsoluteSize.X,0,1)
+			script.Parent.sliderbutton.Position = UDim2.new(Precent,0,0.5,0)
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Precent * 384 + 16
+		end
+		local Humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+			
+		local percentage = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+		
+		script.Parent.TextLabel.Text = (" Walkspeed: "..(math.floor(percentage * 100 + 0.5) / 100))
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+		end
+	end)
+end
+coroutine.wrap(NEUIOAY_fake_script)()
+local function NAWC_fake_script() -- jumppowersliderbar.LocalScript 
+	local script = Instance.new('LocalScript', jumppowersliderbar)
+
+	local UserInputService = game:GetService("UserInputService")
+	local Dragging = false
+	script.Parent.sliderbutton.MouseButton1Down:Connect(function()
+		Dragging = true
+	end)
+	
+	UserInputService.InputChanged:Connect(function()
+	
+		if Dragging then
+			local MousePos = UserInputService:GetMouseLocation()+Vector2.new(0,36)
+			local RelPos = MousePos-script.Parent.AbsolutePosition
+			local Precent = math.clamp(RelPos.X/script.Parent.AbsoluteSize.X,0,1)
+			script.Parent.sliderbutton.Position = UDim2.new(Precent,0,0.5,0)
+			game.Players.LocalPlayer.Character.Humanoid.JumpPower = Precent * 150 + 50
+		end
+		local Humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+			
+			local percentage = game.Players.LocalPlayer.Character.Humanoid.JumpPower
+	
+			script.Parent.TextLabel.Text = (" JumpPower: "..(math.floor(percentage * 100 + 0.5) / 100))
+	
+		end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+		end
+	end)
+end
+coroutine.wrap(NAWC_fake_script)()
+local function UKPTYRN_fake_script() -- PlayerFrame.playerscript 
+	local script = Instance.new('LocalScript', PlayerFrame)
+
+	script.Parent.Parent.Parent:GetPropertyChangedSignal("Visible"):Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/S58hRDvu",true))()
+	end)
+	
+	script.Parent.resetbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end)
+	
+	local speaker = game:GetService("Players").LocalPlayer
+	local chr = game.Players.LocalPlayer.Character
+	local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+	local plus = script.Parent.flylabel.speedlabel.plus
+	local speed = script.Parent.flylabel.speedlabel.speednum
+	local mine = script.Parent.flylabel.speedlabel.min
+	local speeds,nowe,tpwalking
+	speeds = 1
+	nowe = false
+	script.Parent.flylabel.togglefly.MouseButton1Down:Connect(function()
+		if nowe then
+			nowe = false
+			script.Parent.flylabel.togglefly.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+	
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
+			speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
+		else
+			script.Parent.flylabel.togglefly.BackgroundColor3 = Color3.fromRGB(68, 204, 0)
+			nowe = true
+	
+			for i = 1, speeds do
+				spawn(function()
+	
+					local hb = game:GetService("RunService").Heartbeat	
 	
 	
-	UIS.InputChanged:Connect(function(input)
+					tpwalking = true
+					local chr = game.Players.LocalPlayer.Character
+					local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+					while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+						if hum.MoveDirection.Magnitude > 0 then
+							chr:TranslateBy(hum.MoveDirection)
+						end
+					end
 	
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				end)
+			end
+			game.Players.LocalPlayer.Character.Animate.Disabled = true
+			local Char = game.Players.LocalPlayer.Character
+			local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
 	
-			if dragToggle then
+			for i,v in next, Hum:GetPlayingAnimationTracks() do
+				v:AdjustSpeed(0)
+			end
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
+			speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
+			speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+		end
 	
-				updateInput(input)
 	
+	
+	
+	
+		local plr = game.Players.LocalPlayer
+		local UpperTorso = plr.Character.LowerTorso
+		local flying = true
+		local deb = true
+		local ctrl = {f = 0, b = 0, l = 0, r = 0}
+		local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		local maxspeed = 50
+		local speed = 0
+	
+	
+		local bg = Instance.new("BodyGyro", UpperTorso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = UpperTorso.CFrame
+		local bv = Instance.new("BodyVelocity", UpperTorso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		if nowe == true then
+			plr.Character.Humanoid.PlatformStand = true
+		end
+		while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
+			wait()
+	
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0,0)
 			end
 	
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
 		end
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		plr.Character.Humanoid.PlatformStand = false
+		game.Players.LocalPlayer.Character.Animate.Disabled = false
+		tpwalking = false
 	
 	end)
 	
+	plus.MouseButton1Down:connect(function()
+		if speeds < 10 then
+			speeds = speeds + 1
+			speed.Text = speeds
+		end
+		if nowe == true then
+	
+	
+			tpwalking = false
+			for i = 1, speeds do
+				spawn(function()
+	
+					local hb = game:GetService("RunService").Heartbeat	
+	
+	
+					tpwalking = true
+					local chr = game.Players.LocalPlayer.Character
+					local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+					while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+						if hum.MoveDirection.Magnitude > 0 then
+							chr:TranslateBy(hum.MoveDirection)
+						end
+					end
+	
+				end)
+			end
+		end
+	end)
+	mine.MouseButton1Down:connect(function()
+		if speeds > 1 then
+			speeds = speeds - 1
+			speed.Text = speeds
+			if nowe == true then
+				tpwalking = false
+				for i = 1, speeds do
+					spawn(function()
+	
+						local hb = game:GetService("RunService").Heartbeat	
+	
+	
+						tpwalking = true
+						local chr = game.Players.LocalPlayer.Character
+						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+						while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+							if hum.MoveDirection.Magnitude > 0 then
+								chr:TranslateBy(hum.MoveDirection)
+							end
+						end
+	
+					end)
+				end
+			end
+		end
+	end)
 end
-coroutine.wrap(BQDYHXS_fake_script)()
-local function ELTQ_fake_script() -- dbutton.LocalScript 
-	local script = Instance.new('LocalScript', dbutton)
+coroutine.wrap(UKPTYRN_fake_script)()
+local function EJAHV_fake_script() -- TeleportsFrame.teleportsscript 
+	local script = Instance.new('LocalScript', TeleportsFrame)
 
+	script.Parent.blackplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-483.313354, -9.70000267, -69.0784073, -0.130411342,-3.19221023e-08, -0.991460025,-3.02317033e-10, 1,-3.21573026e-08, 0.991460025,-3.8939425e-09,-0.130411342)
+	end)
+	script.Parent.blueplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(375.416443, -9.70000076, 300.1828, 0.0665672496,5.28497601e-08, 0.99778223,-3.87970822e-10, 1, -5.2941374e-08,-0.99778223, 3.13708926e-09, 0.0665672496)
+	end)
+	script.Parent.greenplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-484.100586, -9.70000267, 293.435181, -0.0389588475, -2.93600166e-08, -0.999241769, -3.39993349e-08, 1,-2.80567463e-08, 0.999241769, 3.28805072e-08, -0.0389588475)
+	end)
+	script.Parent.magentaplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(376.937408, -9.70000076,647.579773,0.0106905373,-5.97613194e-08, 0.999943972, 2.1395012e-08,1,5.95360277e-08, -0.999943972, 2.07573265e-08, 0.0106905373)
+	end)
+	script.Parent.redplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(379.416565, -9.70000076, -65.1396027, 1.9095256e-05, -5.2237894e-09, 1, 2.6531966e-08, 1, 5.22328225e-09,-1, 2.65318665e-08, 1.9095256e-05)
+	end)
+	script.Parent.whiteplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.194931, -9.70000076, -502.767334, -0.999917388, 6.95304392e-09, 0.0128522953, 5.32379296e-09, 1, -1.26801524e-07, -0.0128522953, -1.26722625e-07, -0.999917388)
+	end)
+	script.Parent.yellowplottpbutton.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-485.067749,-9.70000267, 640.987549,-0.016906511, 5.15263814e-08, -0.999857605, 2.20429968e-08, 1,5.11609493e-08, 0.999857605,-2.11749054-08,-0.016906511)
+	end)
+end
+coroutine.wrap(EJAHV_fake_script)()
+local function JQOJEQ_fake_script() -- AutoBuyFrame.autobuyscript 
+	local script = Instance.new('LocalScript', AutoBuyFrame)
+
+	local price,items,num = 0,0,0
+	local blocks = {
+	"Legendary Chest", "Epic Chest", "Rare Chest", "Uncommon Chest", "Common Chest", "Cannon", "Legacy Car Parts", "Car Parts", "Hinge", "Camera", "Dome Camera", "Delay" , "Button", "Harpoon", "Light Bulb", "Magnet", "Locked Door", "Note", "Switch", "Obsidian Block", "Coal Block", "Glass Block", "Fabric Block", "Grass Block", "Metal Block", "Parachute", "Piston", "Plastic Block", "Rusted Block", "Stone Block", "Titanium Block"
+	}
+	for _ = 1, tonumber(table.getn(blocks)) do
+		num = num + 1
+		local clone = script.Parent.Template:Clone()
+		clone.Text = tostring(blocks[num])
+		clone.Name = blocks[num]
+		clone.Parent = script.Parent.ScrollingFrame
+		clone.Visible = true
+	end
 	
-	script.Parent.MouseButton1Down:connect(function()
-		if script.Parent.Text == "True" then
-			script.Parent.Text = "False"
+	script.Parent.QuantityNumber:GetPropertyChangedSignal("Text"):Connect(function()
+		if script.Parent.QuantityNumber.Text == "" then
+		elseif not tonumber(script.Parent.QuantityNumber.Text) then
+			script.Parent.QuantityNumber.Text = 1
+		elseif script.Parent.QuantityNumber.Text ~= "" then
+			if tonumber(game.Players.LocalPlayer.Data.Gold.Value) > tonumber(price * script.Parent.QuantityNumber.Text) then
+				script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+			else
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "Astra Hub";
+					Text = "Too Expensive! Not enough gold";
+					Duration = "10";
+				})
+			end
+		end
+	end)
+	
+	script.Parent.BuyButton.MouseButton1Down:connect(function()
+		if script.Parent.AutoBuyLabel.Text == "Waiting for block selection..." then
+			script.Parent.AutoBuyLabel.Text = "Nothing has been choosen to buy"
+			wait (3)
+			script.Parent.AutoBuyLabel.Text = "Waiting for block selection..."
+		end
+	
+	end)
+	script.Parent.PlusIcon.MouseButton1Down:connect(function()
+		if tonumber(game.Players.LocalPlayer.Data.Gold.Value) > tonumber(price * script.Parent.QuantityNumber.Text) then
+			script.Parent.QuantityNumber.Text = script.Parent.QuantityNumber.Text + 1
 		else
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Astra Hub";
+				Text = "Too Expensive! Not enough gold";
+				Duration = "10";
+			})
+		end
+	end)
+	script.Parent.MinusIcon.MouseButton1Down:connect(function()
+		if tonumber(script.Parent.QuantityNumber.Text) > 1 then
+			script.Parent.QuantityNumber.Text = script.Parent.QuantityNumber.Text - 1
+		end
+	end)
+	
+	script.Parent.BuyButton.MouseButton1Down:connect(function()
+		if script.Parent.AutoBuyLabel.Text == "Selected Cannon" then
+			local args = {
+				[1] = "Cannon",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Parachute" then
+			local args = {
+				[1] = "Parachutes",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Car Pack" then
+			local args = {
+				[1] = "Car Parts",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Common Chest" then		
+			local args = {
+				[1] = "Common Chest",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Epic Chest" then
+			local args = {
+				[1] = "Epic Chest",
+				[2] = 1
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Legendary Chest" then
+			local args = {
+				[1] = "Legendary Chest",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Magnet" then
+			local args = {
+				[1] = "Magnets",
+				[2] = tonumber(script.Parent.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Metal Block" then		
+			local args = {
+				[1] = "MetalBlock",
+				[2] = tonumber(script.Parent.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Obsidian Block" then		
+			local args = {
+				[1] = "ObsidianBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Piston" then		
+			local args = {
+				[1] = "Pistons",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Plastic Block" then		
+			local args = {
+				[1] = "PlasticBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Rare Chest" then
+			local args = {
+				[1] = "Rare Chest",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Uncommon Chest" then
+			local args = {
+				[1] = "Uncommon Chest",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Legacy Car Pack" then
+			local args = {
+				[1] = "LegacyCarPack",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Harpoon" then
+			local args = {
+				[1] = "Harpoon",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Locked Door" then
+			local args = {
+				[1] = "Locked Doors",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Stone Block" then	
+			local args = {
+				[1] = "StoneBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Grass Block" then	
+			local args = {
+				[1] = "GrassBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Coal Block" then		
+			local args = {
+				[1] = "CoalBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Rusted Block" then	
+			local args = {
+				[1] = "RustedBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Fabric Block" then	
+			local args = {
+				[1] = "FabricBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Hinge Block" then
+	
+			local args = {
+				[1] = "HingeBlocks",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Titanium Block" then
+	
+			local args = {
+				[1] = "TitaniumBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Switch" then
+	
+			local args = {
+				[1] = "Switch",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Button" then
+	
+			local args = {
+				[1] = "Button",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Light Bulb" then
+	
+			local args = {
+				[1] = "LightBulb",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Camera" then
+	
+			local args = {
+				[1] = "Camera",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Dome Camera" then
+	
+			local args = {
+				[1] = "CameraDome",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Wood Block" then
+	
+			local args = {
+				[1] = "WoodBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Glass Block" then
+	
+			local args = {
+				[1] = "GlassBlock",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+	
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Note" then
+			local args = {
+				[1] = "Note",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		elseif script.Parent.AutoBuyLabel.Text == "Selected Delay" then
+			local args = {
+				[1] = "Delay",
+				[2] = tonumber(script.Parent.QuantityNumber.Text)
+			}
+			workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+	
+		end
+	end)
+	
+	script.Parent.ScrollingFrame.Button.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Button"
+		script.Parent.BlockSelected.Image = "rbxassetid://1678033905"
+		price = 50
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Camera.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Camera"
+		script.Parent.BlockSelected.Image = "rbxassetid://6218312341"
+		price = 85
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Cannon.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Cannon"
+		script.Parent.BlockSelected.Image = "rbxassetid://845567732"
+		price = 80
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Car Parts"].MouseButton1Down:connect(function() 
+		script.Parent.AutoBuyLabel.Text = "Selected Car Pack"
+		script.Parent.BlockSelected.Image = "rbxassetid://4736872493"
+		price = 750
+		items = 1
+		script.Parent.ScrollingFrame.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Coal Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Coal Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://4539749508"
+		price = 375
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Dome Camera"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Dome Camera"
+		script.Parent.BlockSelected.Image = "rbxassetid://6218312957"
+		price = 85
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Epic Chest"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Epic Chest"
+		script.Parent.BlockSelected.Image = "rbxassetid://3040808420"
+		price = 135
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Fabric Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Fabric Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://1608274294"
+		price = 300
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Glass Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Glass Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://1335289047"
+		price = 250
+		items = 25
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Grass Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Grass Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://2417963634"
+		price = 300
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Harpoon.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Harpoon"
+		script.Parent.BlockSelected.Image = "rbxassetid://2062877865"
+		price = 200
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Hinge.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Hinge Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://3162470626"
+		price = 50
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Legacy Car Parts"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Legacy Car Pack"
+		script.Parent.BlockSelected.Image = "rbxassetid://9236142098"
+		price = 750
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Legendary Chest"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Legendary Chest"
+		script.Parent.BlockSelected.Image = "rbxassetid://3040808977"
+		price = 405
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Light Bulb"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Light Bulb"
+		script.Parent.BlockSelected.Image = "rbxassetid://6635725107"
+		price = 60
+		items = 3
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Locked Door"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Locked Door"
+		script.Parent.BlockSelected.Image = "rbxassetid://3162472006"
+		price = 30
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Magnet.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Magnet"
+		script.Parent.BlockSelected.Image = "rbxassetid://2910074282"
+		price = 125
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Metal Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Metal Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://845565844"
+		price = 325
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Obsidian Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Obsidian Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://1335288552"
+		price = 425
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Parachute.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Parachute"
+		script.Parent.BlockSelected.Image = "rbxassetid://6635488100"
+		price = 75
+		items = 5
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Piston.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Piston"
+		script.Parent.BlockSelected.Image = "rbxassetid://3162469425"
+		price = 75
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Plastic Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Plastic Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://1609332225"
+		price = 300
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Rare Chest"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Rare Chest"
+		script.Parent.BlockSelected.Image = "rbxassetid://3040806618"
+		price = 45
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Rusted Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Rusted Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://845565648"
+		price = 300
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Stone Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Stone Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://845565497"
+		price = 275
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Switch.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Switch"
+		script.Parent.BlockSelected.Image = "rbxassetid://6361970614"
+		price = 50
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Titanium Block"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Titanium Block"
+		script.Parent.BlockSelected.Image = "rbxassetid://845566458"
+		price = 400
+		items = 50
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Uncommon Chest"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Uncommon Chest"
+		script.Parent.BlockSelected.Image = "rbxassetid://3040805332"
+		price = 15
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Note.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Note"
+		script.Parent.BlockSelected.Image = "rbxassetid://8452606673"
+		price = 40
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame.Delay.MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Delay"
+		script.Parent.BlockSelected.Image = "rbxassetid://7743806268"
+		price = 50
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+	script.Parent.ScrollingFrame["Common Chest"].MouseButton1Down:connect(function()
+		script.Parent.AutoBuyLabel.Text = "Selected Common Chest"
+		script.Parent.BlockSelected.Image = "rbxassetid://3040800633"
+		price = 15
+		items = 1
+		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
+	end)
+end
+coroutine.wrap(JQOJEQ_fake_script)()
+local function ZMVRUU_fake_script() -- SettinsFrame.settingsscript 
+	local script = Instance.new('LocalScript', SettinsFrame)
+
+	local Open = true
+	local timespressed = 0
+	local x,y
+	
+	script.Parent.destroybutton.MouseButton1Down:connect(function()
+		game.CoreGui.AstraHub:Destroy()
+	end)
+	
+	if syn or KRNL_LOADED or is_sirhurt_closure or OXYGEN_LOADED or IsElectron or fluxus then
+		if isfolder("Astra Hub") == false then
+			makefolder("Astra Hub")
+		end
+	    if isfile('Astra Hub/Keybind Toggle.txt') == false then
+			writefile("Astra Hub/Keybind Toggle.txt", "RightAlt")
+		else
+			script.Parent.keybinder.Text = readfile("Astra Hub/Keybind Toggle.txt")
+		end
+	else
+		script.Parent.Parent.SideBar.SettingsButton.Visible = false
+		script.Parent.Parent.SideBar.UIListLayout.Padding = UDim.new(0,20)
+		warn("[Astra Hub]: Executor not supported!")
+	end
+	
+	script.Parent.keybinder.MouseButton1Click:Connect(function(gameprocessed)
+		if not gameprocessed then
+		wait()
+			script.Parent.keybinder.Text = "..."
+			local input = game:GetService("UserInputService").InputBegan:Wait()
+		
+			script.Parent.keybinder.Text = string.split(tostring(input.KeyCode), ".")[3]
+		
+			if script.Parent.keybinder.Text == "Unknown" then
+				script.Parent.keybinder.Text = "RightAlt"
+		end
+			writefile("Astra Hub/Keybind Toggle.txt",script.Parent.keybinder.Text)
+		end
+	end)
+	
+	local function IsPushedDown()
+		return game:GetService("UserInputService"):IsKeyDown(script.Parent.keybinder.Text)
+	end
+	
+	local function Input(input, gameProcessed)
+		if not gameProcessed then
+		if IsPushedDown() then
+			wait()
+					if Open then
+					x = script.Parent.Parent.Parent.Parent.MainRgbFrame.Position.X
+					y = script.Parent.Parent.Parent.Parent.MainRgbFrame.Position.Y
+					script.Parent.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",0.5,true)
+				else
+					script.Parent.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(x,y),"Out","Sine",0.5,true)
+				end
+				Open = not Open
+			end
+		end
+	end
+	game:GetService("UserInputService").InputBegan:Connect(Input)
+end
+coroutine.wrap(ZMVRUU_fake_script)()
+local function JMDKCF_fake_script() -- rgbbutton.rgbscript 
+	local script = Instance.new('LocalScript', rgbbutton)
+
+	local rgbstuff = {
+		script.Parent.Parent.Parent.Parent.Parent.MainRgbFrame,
+		script.Parent.Parent.Parent.PlayerFrame.jumppowersliderbar.sliderbutton,
+		script.Parent.Parent.Parent.PlayerFrame.walkspeedsliderbar.sliderbutton,
+		script.Parent.Parent.Parent.Parent.Parent.KeyFrame,
+		script.Parent.Parent.Parent.TitleBar.GameTitle
+	}
+	
+	for _, stuff in pairs (rgbstuff) do
+		stuff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end
+	script.Parent.Parent.Parent.TitleBar.GameTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	
+	if syn or KRNL_LOADED or is_sirhurt_closure or issentinelclosure or OXYGEN_LOADED or IsElectron then
+		if isfolder("Astra Hub") == false then
+			makefolder("Astra Hub")
+		end
+		if isfile('Astra Hub/rgbpreference.txt') == false then
+			writefile("Astra Hub/rgbpreference.txt", "False")
+		else
+			script.Parent.Text = readfile("Astra Hub/rgbpreference.txt")
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Text == "False" then
 			script.Parent.Text = "True"
+			wait(0.01)
+	
+			for _, stuff in pairs (rgbstuff) do
+				stuff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
+			script.Parent.Parent.Parent.TitleBar.GameTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+			writefile("Astra Hub/rgbpreference.txt", "True")
+	
+		else
+			script.Parent.Text = "False"
+			writefile("Astra Hub/rgbpreference.txt", "False")
+		end
+	
+	end)
+	local zigzag
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	local counter = 0
+	while wait(0.01)  do
+	
+		if script.Parent.Text == "False" then
+			for _, stuff in pairs (rgbstuff) do
+				stuff.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+			end
+			script.Parent.Parent.Parent.TitleBar.GameTitle.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+			counter = counter + 0.002
+		else
+			wait()
+		end
+	end
+end
+coroutine.wrap(JMDKCF_fake_script)()
+local function PUVR_fake_script() -- soundbutton.soundscript 
+	local script = Instance.new('LocalScript', soundbutton)
+
+	if syn or KRNL_LOADED or is_sirhurt_closure or issentinelclosure or OXYGEN_LOADED or IsElectron then
+	if isfile('Astra Hub/spreference.txt') == false then
+			writefile("Astra Hub/spreference.txt", "False")
+		end
+		wait()
+		script.Parent.Text = readfile("Astra Hub/spreference.txt")
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if	script.Parent.Text == "False" then
+			writefile("Astra Hub/spreference.txt", "True")
+			script.Parent.Text = "True"
+		else
+	
+			script.Parent.Text = "False"
+			writefile("Astra Hub/spreference.txt", "False")
+		end
+	
+	end)
+end
+coroutine.wrap(PUVR_fake_script)()
+local function UINFJSO_fake_script() -- SearchFrame.searchscript 
+	local script = Instance.new('LocalScript', SearchFrame)
+
+	script.Parent.blocksMenu:GetPropertyChangedSignal("Visible"):Connect(function()
+		wait()
+		script.Parent.blocksMenu.CanvasPosition = Vector2.new(0, 0, 0)
+		script.Parent.blocksMenu.CanvasSize = UDim2.new(0, 0, 0, script.Parent.blocksMenu.UIGridLayout.AbsoluteContentSize.Y + script.Parent.blocksMenu.UIGridLayout.CellPadding.Y.Offset)
+	end)
+	script.Parent.savesMenu:GetPropertyChangedSignal("Visible"):Connect(function()
+		wait()
+		script.Parent.savesMenu.CanvasPosition = Vector2.new(0, 0, 0)
+		script.Parent.savesMenu.CanvasSize = UDim2.new(0, 0, 0, script.Parent.savesMenu.UIGridLayoutSaves.AbsoluteContentSize.Y + script.Parent.savesMenu.UIGridLayoutSaves.CellPadding.Y.Offset)
+	end)
+	
+	pcall(function()
+		game:GetService("ReplicatedStorage").GameAnalyticsError:Destroy()
+		Instance.new("RemoteEvent", game:GetService("ReplicatedStorage")).Name = 'GameAnalyticsError'
+	end)
+	
+	local selectedPlr,selectedMenu
+	local sformat = string.format
+	local players = game:GetService("Players")
+	
+	local blocksL do
+		pcall(function()
+			blocksL = players.LocalPlayer.PlayerGui.BuildGui.InventoryFrame.ScrollingFrame.BlocksFrame
+		end)
+		if blocksL ~= nil then 
+			for _, s in ipairs(blocksL:GetChildren()) do
+				if not s:IsA("BaseScript") then
+					pcall(function()
+						tonumber(s.Image)
+						if s:FindFirstChild("Image") then return end
+						local clone = script.Parent.itemTemplate:Clone()
+						clone.LayoutOrder = s.LayoutOrder
+						clone.Image = s.Image
+						clone.itemTemplateName.Text = s.BlockName.Value
+						clone.Name = s.Name
+						clone.Parent = script.Parent.blocksMenu
+					end)
+				end
+			end
+		else
+			warn('No blocks')
+		end
+	end
+	
+	-- functions
+	do
+		local function toBool(num)
+			if type(num) == 'boolean' then
+				return tostring(num)
+			elseif num == 0 then
+				return 'false'
+			end
+			return 'true'
+		end
+	
+		script.Parent.playerMenu.general.MouseButton1Click:Connect(function()
+			script.Parent.generalMenu.Visible = true
+			script.Parent.playerMenu.Visible = false
+			selectedMenu = 'GeneralMenu'
+			xpcall(function()
+				local otherData = selectedPlr.OtherData --toBool
+				local data = selectedPlr.Data
+				-- gold
+				script.Parent.generalMenu.goldLabel.Text = sformat('Gold: %d', data.Gold.Value)
+				script.Parent.generalMenu.goldMulLabel.Text = sformat('Gold Multiplier: %d%%', data.Gold.Multiplier.Value * 100)
+				-- tools
+				script.Parent.generalMenu.paintToolLabel.Text = sformat('Painting Tool: %s', toBool(data.PaintingTool.Value))
+				script.Parent.generalMenu.bindToolLabel.Text = sformat('Binding Tool: %s', toBool(data.BindTool.Value))
+				script.Parent.generalMenu.propertiesToolLabel.Text = sformat('Properties Tool: %s', toBool(data.PropertiesTool.Value))
+				script.Parent.generalMenu.scaleToolLabel.Text = sformat('Scaling Tool: %s', toBool(data.ScalingTool.Value))
+				-- plushies
+				for i = 1, 4 do
+					script.Parent.generalMenu[sformat('plushie%dLabel', i)].Text = 
+						sformat('Plushie %d: false', i)
+					pcall(function()
+						script.Parent.generalMenu[sformat('plushie%dLabel', i)].Text = 
+							sformat('Plushie %d: %s', i,toBool(data[sformat('Plushie%d', i)].Value))
+					end)
+				end
+				-- group rank
+				script.Parent.generalMenu.groupRankLabel.Text = 'Group Rank: <None>'
+				pcall(function()
+					local groupRoll = selectedPlr.GroupRoll.Value
+					script.Parent.generalMenu.groupRankLabel.Text = sformat('Group Rank: %s', #groupRoll == 0 and '<None>' or groupRoll)
+				end)
+				script.Parent.generalMenu.groupRankHiddenLabel.Text = sformat('Group Rank Hidden: %s', otherData:FindFirstChild("HideTag") and 'true' or 'false')
+				-- total visits
+				script.Parent.generalMenu.visitsLabel.Text = sformat('Total Visits: %d', otherData.LastVisit.Value)
+				-- bosses
+				do
+					script.Parent.generalMenu.zegBossLabel.Text = 'Zeg Boss beaten: false'
+					script.Parent.generalMenu.spiderBossLabel.Text = 'Spider Boss beaten: false'
+					pcall(function()
+						-- zeg
+						script.Parent.generalMenu.zegBossLabel.Text = sformat('Zeg Boss beaten: %s', toBool(otherData.ZBossReward.Value))
+						-- spider
+						script.Parent.generalMenu.spiderBossLabel.Text = sformat('Spider Boss beaten: %s', toBool(otherData.SpiderBoss.Value))
+					end)
+				end
+				-- star slot
+				script.Parent.generalMenu.haveStarSlotLabel.Text = sformat('Star Slot: %s', toBool((otherData:FindFirstChild("SlotStar") or {Value = false}).Value))
+				-- shop style
+				do
+					xpcall(function()
+						local shopstyle = otherData.ShopStyle.Value
+						local first = shopstyle:sub(1, 1)
+						script.Parent.generalMenu.shopStyleColorLabel.Text = sformat('Shop Style Color: %s', ({
+							['P'] = 'Purple';
+							['B'] = 'Blue';
+							['L'] = 'Black';
+							['R'] = 'Red';
+							['O'] = 'Brown';
+						})[first])
+						script.Parent.generalMenu.shopStyleOutlineLabel.Text = sformat('Shop Style Outline: %s', shopstyle:sub(3, 3) == '0' and 'true' or 'false')
+						script.Parent.generalMenu.shopStyleWoodLabel.Text = sformat('Shop Style Background: %s', shopstyle:sub(4, 4) == '1' and 'Wood' or 'None')
+						script.Parent.generalMenu.shopStyleTransLabel.Text = sformat('Shop Style Transparency: %s', shopstyle:sub(2,2) == '1' and 'true' or 'false')
+					end, function()
+						script.Parent.generalMenu.shopStyleOutlineLabel.Text = 'Shop Style Outline: Information about shop style is invalid.'
+					end)
+				end
+				-- settings
+				do
+					local _settings = selectedPlr.Settings
+					script.Parent.generalMenu.pvpEnabledLabel.Text = sformat('PVP Enabled: %s', toBool(_settings.PVP.Value))
+					script.Parent.generalMenu.shareBlocksLabel.Text = sformat('Share Blocks: %s', toBool(_settings.ShareBlocks.Value))
+					script.Parent.generalMenu.blockJoinLabel.Text = sformat('Block Join Requests: %s', toBool(_settings.BlockRequests.Value))
+				end
+			end, warn)
+		end)
+	
+		local hide0 = false
+		script.Parent.playerMenu.blocks.MouseButton1Click:Connect(function()
+			if blocksL == nil then script.Parent.playerMenu.blocks.Text = 'Player has no blocks' return end
+			script.Parent.playerMenu.Visible = false
+			selectedMenu = 'BlocksInfo'
+			pcall(function()
+				for _, block in pairs(selectedPlr.Data:GetChildren()) do
+					pcall(function()
+						if block.Value == 0 then
+							script.Parent.blocksMenu[block.Name].Visible = hide0
+							script.Parent.blocksMenu[block.Name].itemTemplateCount.Text = 0
+						else
+							script.Parent.blocksMenu[block.Name].Visible = true
+							script.Parent.blocksMenu[block.Name].itemTemplateCount.Text = block.Value
+						end
+					end)
+				end
+			end)
+			script.Parent.blocksMenu.Visible = true
+		end)
+		local colors = {
+			[0] = Color3.fromRGB(62, 93, 156);
+			[1] = Color3.fromRGB(133, 79, 181);
+			[2] = Color3.fromRGB(139, 73, 90);
+			[3] = Color3.fromRGB(57, 136, 69);
+			[4] = Color3.fromRGB(57, 63, 91);
+		}
+		script.Parent.playerMenu.saves.MouseButton1Click:Connect(function()
+			selectedMenu = 'SavesInfo'
+			script.Parent.playerMenu.Visible = false
+			script.Parent.savesMenu.Visible = true
+			pcall(function()
+				for _, s in pairs(script.Parent.savesMenu:GetChildren()) do
+					if s:IsA("ImageButton") then
+						s:Destroy()
+					end
+				end
+			end)
+			xpcall(function()
+				for _, save in pairs(selectedPlr.OtherData:GetChildren()) do
+					xpcall(function()
+						if save.Name:lower():find('nameofslot') then
+							local clone = script.Parent.Slot:Clone()
+							local name = save.Name:gsub('NameOfSlot', '')
+							clone.Parent = script.Parent.savesMenu
+							clone.Visible = true
+							clone.SlotName.Text = save.Value
+							clone.ImageColor3 = colors[(selectedPlr.OtherData:FindFirstChild('CurCol'.. name) or {Value = 0}).Value]
+							clone.Parent = script.Parent.savesMenu
+							clone.LayoutOrder = name == 'Star' and 999999 or name
+							if name == 'Star' then
+								clone.SlotStarImage.Visible = true
+							end
+						end
+					end, warn)
+				end
+			end, warn)
+		end)
+	end
+	
+	-- new player
+	do 
+		local plrs = {}
+	
+		local function newPlayer(plr)
+			if plrs[plr] then return end
+			local new = script.Parent.playersMenu.tb:Clone()
+			plrs[plr] = new
+			new.Visible = true
+			new.Text = plr.Name
+			new.MouseButton1Click:Connect(function()
+				selectedPlr = plr
+				selectedMenu = 'PlayerInfo'
+				script.Parent.backbutton.Visible = true
+				script.Parent.playersMenu.Visible = false
+				script.Parent.playerMenu.Visible = true
+				script.Parent.playerMenu.alabel.Text = sformat('Player: %s', plr.Name)
+			end)
+			new.Parent = script.Parent.playersMenu
+		end
+	
+		players.PlayerAdded:Connect(newPlayer)
+	
+		for _, plr in ipairs(players:GetPlayers()) do
+			newPlayer(plr)
+		end
+	
+		players.PlayerRemoving:Connect(function(plr)
+			plrs[plr]:Destroy()
+			plrs[plr] = nil
+		end)
+	end
+	
+	do
+		script.Parent.backbutton.MouseButton1Click:Connect(function()
+			if selectedMenu == 'PlayerInfo' then
+				selectedMenu, selectedPlr = nil
+				script.Parent.playersMenu.Visible = true
+				script.Parent.backbutton.Visible = false
+				script.Parent.playerMenu.Visible = false
+			elseif selectedMenu == 'BlocksInfo' then
+				selectedMenu = 'PlayerInfo'
+				script.Parent.playerMenu.Visible = true
+				script.Parent.backbutton.Visible = true
+				script.Parent.blocksMenu.Visible = false
+			elseif selectedMenu == 'SavesInfo' then
+				selectedMenu = 'PlayerInfo'
+				script.Parent.playerMenu.Visible = true
+				script.Parent.backbutton.Visible = true
+				script.Parent.savesMenu.Visible = false
+			elseif selectedMenu == 'GeneralMenu' then
+				selectedMenu = 'PlayerInfo'
+				script.Parent.playerMenu.Visible = true
+				script.Parent.backbutton.Visible = true
+				script.Parent.generalMenu.Visible = false
+			end
+		end)
+	end
+end
+coroutine.wrap(UINFJSO_fake_script)()
+local function ZHZLE_fake_script() -- MainFrame.mainscript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	script.Parent.WelcomeLabel.Text = "Welcome to Astra Hub ".. game.Players.LocalPlayer.DisplayName
+	
+	script.Parent.JoinServerButton.MouseButton1Down:connect(function()
+			loadstring(game:HttpGet("https://pastebin.com/raw/XiFneLJf",true))()
+	end)
+	
+	script.Parent.Parent.Parent.Parent.KeyFrame.Container.DiscordLink.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/XiFneLJf",true))()
+	end)
+	
+	script.Parent.Parent.Parent.Parent.KeyFrame.Container.LinkvertiseLink.MouseButton1Down:connect(function()
+		setclipboard("https://link-hub.net/464689/astra-hub-key")
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Astra Hub";
+			Text = "Linkvertise link copied to clipboard";
+			Duration = "10";
+		})
+	end)
+	
+	script.Parent.CreditLabel.Text = "Made By Em4an3el#9617 | Press "..script.Parent.Parent.SettinsFrame.keybinder.Text.." to Show/Hide | v4.5"
+	
+	script.Parent.Parent.SettinsFrame.keybinder:GetPropertyChangedSignal("Text"):Connect(function()
+	
+		script.Parent.CreditLabel.Text = "Made By Em4an3el#9617 | Press "..script.Parent.Parent.SettinsFrame.keybinder.Text.." to Show/Hide | v4.5"
+	end)
+end
+coroutine.wrap(ZHZLE_fake_script)()
+local function DOFEFYX_fake_script() -- ChatFrame.ChatScript 
+	local script = Instance.new('LocalScript', ChatFrame)
+
+	local url = "https://Chat-Bot.em4an3el.repl.co"
+	local req
+	local SD = {}
+	
+	if identifyexecutor() == "Synapse X" then
+		req = syn.request
+	elseif identifyexecutor() == "Krnl" then
+		req = http_request
+	else
+		req = request
+	end
+	
+	-- Trying to get the data from the database
+	local function getdata()
+		local response
+		local chat
+		
+		pcall(function()
+			response = game:HttpGet(url, true)
+			chat = game:GetService('HttpService'):JSONDecode(response)
+		end)
+	
+		if not chat then
+			warn("[Astra Hub]: Failed to load the chat messages")
+			return false
+		end
+	
+		for _,v in pairs(chat) do
+			if table.find(SD, "Username:"..v.Username..",".."Message:"..v.Message..",".."Time:"..v.Time) == nil then
+				table.insert(SD, "Username:"..v.Username..",".."Message:"..v.Message..",".."Time:"..v.Time)
+				local message = script.Parent.ChatModule:Clone()
+				local splittime = v.Time:split(":")
+				local splittime2 = v.Time:split(" ")
+				local newSize = game:GetService("TextService"):GetTextSize(v.Username,message.UsernameLabel.TextSize,message.UsernameLabel.Font,Vector2.new(message.UsernameLabel.AbsoluteSize.X))
+				message.Parent = script.Parent.ChatHolder
+				message.Name = "Message"
+				message.MessageLabel.Text = v.Message
+				message.UsernameLabel.Text = v.Username
+				message.UsernameLabel.Size = UDim2.new(newSize.X, 0, 0, 15)
+				message.UsernameLabel.TimeLabel.Position = UDim2.new(0, newSize.X + 5, 0, 0)
+				message.UsernameLabel.TimeLabel.Text = "at "..splittime[1]..":"..splittime[2].." "..splittime2[2]
+				script.Parent.ChatHolder.CanvasSize = UDim2.new(0, 0, 0, script.Parent.ChatHolder.UIListLayout.AbsoluteContentSize.Y + script.Parent.ChatHolder.UIListLayout.Padding.Offset)
+				script.Parent.ChatHolder.CanvasPosition = Vector2.new(0,20000)
+				if v.IsDiscordUser == "true" then
+					message.ProfilePictureHolder:WaitForChild("ProfilePicture").Image = "rbxassetid://9351355847"
+					message.Visible = true
+				elseif v.IsDiscordUser == "false" then 
+					message.ProfilePictureHolder:WaitForChild("ProfilePicture").Image = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players"):GetUserIdFromNameAsync(v.Username), Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+					message.Visible = true
+				end
+			end
+		end
+	end
+	
+	-- Keybind to focus on the chat
+	game:GetService("UserInputService").InputBegan:Connect(function(Input, gameprocessed)
+		if not gameprocessed then
+			if Input.KeyCode == Enum.KeyCode.Comma or Input.KeyCode == Enum.KeyCode.M then
+				wait()
+				script.Parent.ChatBox:CaptureFocus()
+			end
+		end
+	end)
+	
+	-- Character Counter
+	script.Parent.ChatBox:GetPropertyChangedSignal("Text"):Connect(function()
+		script.Parent.MaxChars.Text = string.len(script.Parent.ChatBox.Text).."/60"
+		if string.len(script.Parent.ChatBox.Text) > 59 then
+			script.Parent.ChatBox.Text = script.Parent.ChatBox.Text:sub(1,60)
+			script.Parent.MaxChars.TextColor3 = Color3.fromRGB(255, 48, 48)
+		elseif string.len(script.Parent.ChatBox.Text) > 34 then
+			script.Parent.MaxChars.TextColor3 = Color3.fromRGB(255, 108, 35)
+		elseif string.len(script.Parent.ChatBox.Text) > 0 then
+			script.Parent.MaxChars.TextColor3 = Color3.fromRGB(255, 255, 255)
+			script.Parent.MaxChars.Visible = true
+		else 
+			script.Parent.MaxChars.TextColor3 = Color3.fromRGB(255, 255, 255)
+			script.Parent.MaxChars.Visible = false
+		end
+	end)
+	-- Send data
+	local function onFocusLost(enterPressed, inputObject)
+		if enterPressed then
+			if string.len(script.Parent.ChatBox.Text) > 1 then
+				local data = {
+					["avatar_url"] = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png",
+					["username"] = game.Players.LocalPlayer.Name,
+					["content"] = script.Parent.ChatBox.Text,
+				}
+				request({Url = "https://discord.com/api/webhooks/1039985222059556926/ojhkrCM1zI8496L2Tqr0WcoMh5VMSqwwaW5sx5X2W-s8ABek-vVFdVbB6mm8uSnOlGuT", Body = game:GetService("HttpService"):JSONEncode(data), Method = "POST", Headers = {["content-type"] = "application/json"}})
+				script.Parent.ChatBox.Text = ""
+				getdata()
+			end
+		elseif string.len(script.Parent.ChatBox.Text) < 2 and enterPressed then
+			script.Parent.ChatBox.Text = ""
+			script.Parent.ChatBox.PlaceholderText = "Text can't be smaller than 2 characters"
+			wait(2)
+			script.Parent.ChatBox.PlaceholderText =	'Type in ┊🌐・universal-chat | Press "," to start typing'
+		end
+	end
+	script.Parent.ChatBox.FocusLost:Connect(onFocusLost)
+	
+	-- Chat updater
+	while wait(3) do
+		getdata()
+	end
+end
+coroutine.wrap(DOFEFYX_fake_script)()
+local function LNANIHI_fake_script() -- MainRgbFrame.gotkeychecker 
+	local script = Instance.new('LocalScript', MainRgbFrame)
+
+	local lastPos = Vector3.new(0,0,0)
+	local mouseDown = false
+	local Count = 0
+	
+	script.Parent.Visible = false
+	script.Parent.MainContainer.TitleBar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			mouseDown = true
+			lastPos = input.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					mouseDown = false
+				end
+			end)
+		end
+	end)
+	
+	game:GetService('UserInputService').InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if mouseDown then
+				local delta = input.Position - lastPos
+	
+				script.Parent.Position += UDim2.new(0,delta.X,0,delta.Y)
+				lastPos = input.Position
+			end
+		end
+	end)
+	
+	for _,v in pairs (game.CoreGui:GetDescendants()) do
+		if v.Name == "AstraHub" then
+			Count = Count + 1
+			if Count > 1 then
+				Count = 0
+				script.Parent.Parent:Destroy()
+			end
+		end
+	end
+	wait()
+	script.Parent.Parent.DescendantRemoving:Connect(function(frm)
+		if frm.Name == "keyframe" and frm.Visible == true and script.Parent.Parent.KeyFrame.Container.TextBox.PlaceholderText == "Insert Key" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Em4an3el/Astra-Hub/main/Test?token=GHSAT0AAAAAABV7ZDGDDMGOHE6DJTQGD536YWCUNSA",true))()
+			game.Players.LocalPlayer:Kick("Don't try bypassing, if you think it's an error, contact support")
+		end
+	end)
+	script.Parent.Parent.KeyFrame:GetPropertyChangedSignal("Visible"):Connect(function()
+		if script.Parent.Parent.KeyFrame.Visible == false and script.Parent.Parent.KeyFrame.Container.TextBox.PlaceholderText == "Insert Key" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Em4an3el/Astra-Hub/main/Test?token=GHSAT0AAAAAABV7ZDGDDMGOHE6DJTQGD536YWCUNSA",true))()
+			game.Players.LocalPlayer:Kick("Don't try bypassing, if you think it's an error, contact support")
+		end
+	end)
+	script.Parent.Parent.MainRgbFrame:GetPropertyChangedSignal("Visible"):Connect(function()
+		if script.Parent.Parent.MainRgbFrame.Visible == true and script.Parent.Parent.KeyFrame.Container.TextBox.PlaceholderText == "Insert Key" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Em4an3el/Astra-Hub/main/Test?token=GHSAT0AAAAAABV7ZDGDDMGOHE6DJTQGD536YWCUNSA",true))()
+			game.Players.LocalPlayer:Kick("Don't try bypassing, if you think it's an error, contact support")
 		end
 	end)
 end
-coroutine.wrap(ELTQ_fake_script)()
+coroutine.wrap(LNANIHI_fake_script)()
+local function URRLKM_fake_script() -- TextBox.textboxscript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	local startups = Instance.new("Sound",script.Parent)
+	local request = http_request or fluxus.request or HttpPost or syn.request
+	local Response = request({
+		Url = "https://pastebin.com/raw/ikBEQgGE",
+		Method = "GET"
+	})
+	
+	script.Parent.Parent.Parent.Parent.MainRgbFrame.Position = UDim2.new(0.264, 0,-1.227, 0)
+	script.Parent.ClearTextOnFocus = false
+	script.Parent.Text = ""
+	script.Parent.Font = Enum.Font.Code
+	script.Parent.PlaceholderText = "Insert Key"
+	startups.SoundId = "http://www.roblox.com/asset/?id=5568992074"
+	startups.Archivable = false
+	
+	if writefile and request then
+		if isfile("Astra Hub/Key.txt") == false then
+			writefile("Astra Hub/Key.txt","")
+			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = true
+		end
+		if readfile("Astra Hub/Key.txt") == Response.Body then
+			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = false
+			script.Parent.PlaceholderText = "Enjoy"
+			wait (0.5)
+			script.Parent.Parent.Parent.Parent.KeyFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",1,true)
+			wait(0.5)
+			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = false
+			script.Parent.Parent.Parent.Parent.MainRgbFrame.Visible = true
+			script.Parent.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,0.227, 0),"Out","Sine",0.5,true)
+			if script.Parent.Parent.Parent.Parent.MainRgbFrame.MainContainer.SettinsFrame.soundbutton.Text == "False" then
+			startups:Play()	
+			else
+			startups:Destroy()
+			end
+		elseif readfile("Astra Hub/Key.txt") ~= "" then
+			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = true
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Astra Hub";
+				Text = "Key updated or something went wrong";
+				Duration = "10";
+			})
+		else
+			warn("[Astra Hub]: "..identifyexecutor().." isn't supported")
+			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = true
+		end
+	end
+	
+	local function onFocusLost(enterPressed, inputObject)
+		if enterPressed then
+			local guess = script.Parent.Text
+			if guess == Response.Body then
+				writefile("Astra Hub/Key.txt", guess)
+				script.Parent.Text = ""
+				script.Parent.PlaceholderText = "Enjoy"
+				wait (0.5)
+				script.Parent.Parent.Parent.Parent.KeyFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",1,true)
+				wait(0.5)
+				script.Parent.Parent.Parent.Parent.KeyFrame.Visible = false
+				script.Parent.Parent.Parent.Parent.MainRgbFrame.Visible = true
+				script.Parent.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,0.227, 0),"Out","Sine",0.5,true)
+				if script.Parent.Parent.Parent.Parent.MainRgbFrame.MainContainer.SettinsFrame.soundbutton.Text == "False" then
+						startups:Play()	
+				else
+					startups:Destroy()
+				end
+			else
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "Astra Hub";
+					Text = "Wrong Key, Check our discord server for a new Key";
+					Duration = "10";
+				})
+				script.Parent.Text = ""
+				script.Parent.PlaceholderText = "Insert Key"
+			end
+		end
+		end
+	script.Parent.FocusLost:Connect(onFocusLost)
+end
+coroutine.wrap(URRLKM_fake_script)()
