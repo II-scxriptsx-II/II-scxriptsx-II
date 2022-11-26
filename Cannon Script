@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local AstraHub = Instance.new("ScreenGui")
 local MainRgbFrame = Instance.new("Frame")
 local MainContainer = Instance.new("ImageLabel")
@@ -2161,7 +2156,7 @@ HowToGetKey_2.TextWrapped = true
 
 -- Scripts:
 
-local function AIVFY_fake_script() -- SideBar.sidebarscript 
+local function WJJUYM_fake_script() -- SideBar.sidebarscript 
 	local script = Instance.new('LocalScript', SideBar)
 
 	local frames = {
@@ -2293,18 +2288,15 @@ local function AIVFY_fake_script() -- SideBar.sidebarscript
 		script.Parent.SettingsButton:TweenSize(UDim2.new(0, 37,0, 35),"Out","Sine",0.1,true)
 	end)
 end
-coroutine.wrap(AIVFY_fake_script)()
-local function KJAEUKW_fake_script() -- UtilitiesFrame.utilitiesscript 
+coroutine.wrap(WJJUYM_fake_script)()
+local function SUQJ_fake_script() -- UtilitiesFrame.utilitiesscript 
 	local script = Instance.new('LocalScript', UtilitiesFrame)
 
 	local tool = Instance.new("Tool")
 	local Rej
 	
-	
-	if identifyexecutor() == "Fluxus" then
-		Rej = fluxus.queue_on_teleport 
-	elseif identifyexecutor() == "Synapse X" then
-		Rej = syn.queue_on_teleport
+	if identifyexecutor() == "Synapse X" then
+		Rej = syn.queue_on_teleport 
 	else
 		Rej = queue_on_teleport
 	end
@@ -2453,8 +2445,8 @@ local function KJAEUKW_fake_script() -- UtilitiesFrame.utilitiesscript
 	
 	end)
 end
-coroutine.wrap(KJAEUKW_fake_script)()
-local function NEUIOAY_fake_script() -- walkspeedsliderbar.LocalScript 
+coroutine.wrap(SUQJ_fake_script)()
+local function CKDPX_fake_script() -- walkspeedsliderbar.LocalScript 
 	local script = Instance.new('LocalScript', walkspeedsliderbar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2485,8 +2477,8 @@ local function NEUIOAY_fake_script() -- walkspeedsliderbar.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NEUIOAY_fake_script)()
-local function NAWC_fake_script() -- jumppowersliderbar.LocalScript 
+coroutine.wrap(CKDPX_fake_script)()
+local function DQTTZ_fake_script() -- jumppowersliderbar.LocalScript 
 	local script = Instance.new('LocalScript', jumppowersliderbar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2518,8 +2510,8 @@ local function NAWC_fake_script() -- jumppowersliderbar.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NAWC_fake_script)()
-local function UKPTYRN_fake_script() -- PlayerFrame.playerscript 
+coroutine.wrap(DQTTZ_fake_script)()
+local function WAMB_fake_script() -- PlayerFrame.playerscript 
 	local script = Instance.new('LocalScript', PlayerFrame)
 
 	script.Parent.Parent.Parent:GetPropertyChangedSignal("Visible"):Connect(function()
@@ -2721,8 +2713,8 @@ local function UKPTYRN_fake_script() -- PlayerFrame.playerscript
 		end
 	end)
 end
-coroutine.wrap(UKPTYRN_fake_script)()
-local function EJAHV_fake_script() -- TeleportsFrame.teleportsscript 
+coroutine.wrap(WAMB_fake_script)()
+local function ROEUTK_fake_script() -- TeleportsFrame.teleportsscript 
 	local script = Instance.new('LocalScript', TeleportsFrame)
 
 	script.Parent.blackplottpbutton.MouseButton1Down:connect(function()
@@ -2747,8 +2739,8 @@ local function EJAHV_fake_script() -- TeleportsFrame.teleportsscript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-485.067749,-9.70000267, 640.987549,-0.016906511, 5.15263814e-08, -0.999857605, 2.20429968e-08, 1,5.11609493e-08, 0.999857605,-2.11749054-08,-0.016906511)
 	end)
 end
-coroutine.wrap(EJAHV_fake_script)()
-local function JQOJEQ_fake_script() -- AutoBuyFrame.autobuyscript 
+coroutine.wrap(ROEUTK_fake_script)()
+local function HOGX_fake_script() -- AutoBuyFrame.autobuyscript 
 	local script = Instance.new('LocalScript', AutoBuyFrame)
 
 	local price,items,num = 0,0,0
@@ -3291,8 +3283,8 @@ local function JQOJEQ_fake_script() -- AutoBuyFrame.autobuyscript
 		script.Parent.PriceLabel.Text = "Price: "..tonumber(price * script.Parent.QuantityNumber.Text) .." | Item Count: "..tonumber(items * script.Parent.QuantityNumber.Text)
 	end)
 end
-coroutine.wrap(JQOJEQ_fake_script)()
-local function ZMVRUU_fake_script() -- SettinsFrame.settingsscript 
+coroutine.wrap(HOGX_fake_script)()
+local function IEWC_fake_script() -- SettinsFrame.settingsscript 
 	local script = Instance.new('LocalScript', SettinsFrame)
 
 	local Open = true
@@ -3303,7 +3295,8 @@ local function ZMVRUU_fake_script() -- SettinsFrame.settingsscript
 		game.CoreGui.AstraHub:Destroy()
 	end)
 	
-	if syn or KRNL_LOADED or is_sirhurt_closure or OXYGEN_LOADED or IsElectron or fluxus then
+	
+	if writefile then
 		if isfolder("Astra Hub") == false then
 			makefolder("Astra Hub")
 		end
@@ -3315,7 +3308,7 @@ local function ZMVRUU_fake_script() -- SettinsFrame.settingsscript
 	else
 		script.Parent.Parent.SideBar.SettingsButton.Visible = false
 		script.Parent.Parent.SideBar.UIListLayout.Padding = UDim.new(0,20)
-		warn("[Astra Hub]: Executor not supported!")
+		warn("[Astra Hub]: "..identifyexecutor().." is not supported")
 	end
 	
 	script.Parent.keybinder.MouseButton1Click:Connect(function(gameprocessed)
@@ -3328,8 +3321,10 @@ local function ZMVRUU_fake_script() -- SettinsFrame.settingsscript
 		
 			if script.Parent.keybinder.Text == "Unknown" then
 				script.Parent.keybinder.Text = "RightAlt"
-		end
-			writefile("Astra Hub/Keybind Toggle.txt",script.Parent.keybinder.Text)
+			end
+			if writefile then
+				writefile("Astra Hub/Keybind Toggle.txt",script.Parent.keybinder.Text)
+				end
 		end
 	end)
 	
@@ -3354,8 +3349,8 @@ local function ZMVRUU_fake_script() -- SettinsFrame.settingsscript
 	end
 	game:GetService("UserInputService").InputBegan:Connect(Input)
 end
-coroutine.wrap(ZMVRUU_fake_script)()
-local function JMDKCF_fake_script() -- rgbbutton.rgbscript 
+coroutine.wrap(IEWC_fake_script)()
+local function ENRRL_fake_script() -- rgbbutton.rgbscript 
 	local script = Instance.new('LocalScript', rgbbutton)
 
 	local rgbstuff = {
@@ -3415,8 +3410,8 @@ local function JMDKCF_fake_script() -- rgbbutton.rgbscript
 		end
 	end
 end
-coroutine.wrap(JMDKCF_fake_script)()
-local function PUVR_fake_script() -- soundbutton.soundscript 
+coroutine.wrap(ENRRL_fake_script)()
+local function BHAZKG_fake_script() -- soundbutton.soundscript 
 	local script = Instance.new('LocalScript', soundbutton)
 
 	if syn or KRNL_LOADED or is_sirhurt_closure or issentinelclosure or OXYGEN_LOADED or IsElectron then
@@ -3439,8 +3434,8 @@ local function PUVR_fake_script() -- soundbutton.soundscript
 	
 	end)
 end
-coroutine.wrap(PUVR_fake_script)()
-local function UINFJSO_fake_script() -- SearchFrame.searchscript 
+coroutine.wrap(BHAZKG_fake_script)()
+local function KDTEQH_fake_script() -- SearchFrame.searchscript 
 	local script = Instance.new('LocalScript', SearchFrame)
 
 	script.Parent.blocksMenu:GetPropertyChangedSignal("Visible"):Connect(function()
@@ -3692,8 +3687,8 @@ local function UINFJSO_fake_script() -- SearchFrame.searchscript
 		end)
 	end
 end
-coroutine.wrap(UINFJSO_fake_script)()
-local function ZHZLE_fake_script() -- MainFrame.mainscript 
+coroutine.wrap(KDTEQH_fake_script)()
+local function MMDIJSU_fake_script() -- MainFrame.mainscript 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	script.Parent.WelcomeLabel.Text = "Welcome to Astra Hub ".. game.Players.LocalPlayer.DisplayName
@@ -3722,8 +3717,8 @@ local function ZHZLE_fake_script() -- MainFrame.mainscript
 		script.Parent.CreditLabel.Text = "Made By Em4an3el#9617 | Press "..script.Parent.Parent.SettinsFrame.keybinder.Text.." to Show/Hide | v4.5"
 	end)
 end
-coroutine.wrap(ZHZLE_fake_script)()
-local function DOFEFYX_fake_script() -- ChatFrame.ChatScript 
+coroutine.wrap(MMDIJSU_fake_script)()
+local function GDLYRQC_fake_script() -- ChatFrame.ChatScript 
 	local script = Instance.new('LocalScript', ChatFrame)
 
 	local url = "https://Chat-Bot.em4an3el.repl.co"
@@ -3749,7 +3744,7 @@ local function DOFEFYX_fake_script() -- ChatFrame.ChatScript
 		end)
 	
 		if not chat then
-			warn("[Astra Hub]: Failed to load the chat messages")
+			warn("[Astra Hub]: Failed to load the chat messages, retrying")
 			return false
 		end
 	
@@ -3833,8 +3828,8 @@ local function DOFEFYX_fake_script() -- ChatFrame.ChatScript
 		getdata()
 	end
 end
-coroutine.wrap(DOFEFYX_fake_script)()
-local function LNANIHI_fake_script() -- MainRgbFrame.gotkeychecker 
+coroutine.wrap(GDLYRQC_fake_script)()
+local function EZVUIC_fake_script() -- MainRgbFrame.gotkeychecker 
 	local script = Instance.new('LocalScript', MainRgbFrame)
 
 	local lastPos = Vector3.new(0,0,0)
@@ -3895,46 +3890,53 @@ local function LNANIHI_fake_script() -- MainRgbFrame.gotkeychecker
 		end
 	end)
 end
-coroutine.wrap(LNANIHI_fake_script)()
-local function URRLKM_fake_script() -- TextBox.textboxscript 
-	local script = Instance.new('LocalScript', TextBox)
+coroutine.wrap(EZVUIC_fake_script)()
+local function OMHTLG_fake_script() -- Container.keyframescript 
+	local script = Instance.new('LocalScript', Container)
 
 	local startups = Instance.new("Sound",script.Parent)
-	local request = http_request or fluxus.request or HttpPost or syn.request
-	local Response = request({
-		Url = "https://pastebin.com/raw/ikBEQgGE",
-		Method = "GET"
-	})
 	
-	script.Parent.Parent.Parent.Parent.MainRgbFrame.Position = UDim2.new(0.264, 0,-1.227, 0)
-	script.Parent.ClearTextOnFocus = false
-	script.Parent.Text = ""
-	script.Parent.Font = Enum.Font.Code
-	script.Parent.PlaceholderText = "Insert Key"
 	startups.SoundId = "http://www.roblox.com/asset/?id=5568992074"
 	startups.Archivable = false
+	script.Parent.Parent.Parent.MainRgbFrame.Position = UDim2.new(0.264, 0,-1.227, 0)
+	script.Parent.TextBox.PlaceholderText = "Insert Key"
+	script.Parent.TextBox.Text = ""
+	
+	if identifyexecutor() == "Synapse X" then
+		request = syn.request
+	elseif identifyexecutor() == "Krnl" then
+		request = http_request
+	else
+		request = request
+	end
 	
 	if writefile and request then
+		Response = request({Url = "https://pastebin.com/raw/ikBEQgGE",Method = "GET"})
+		if isfolder("Astra Hub") == false then
+			makefolder("Astra Hub")
+			script.Parent.Parent.Parent.KeyFrame.Visible = true
+		end
+		
 		if isfile("Astra Hub/Key.txt") == false then
 			writefile("Astra Hub/Key.txt","")
-			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = true
+			script.Parent.Parent.Parent.KeyFrame.Visible = true
 		end
-		if readfile("Astra Hub/Key.txt") == Response.Body then
-			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = false
-			script.Parent.PlaceholderText = "Enjoy"
+		
+			if readfile("Astra Hub/Key.txt") == Response.Body then
+			script.Parent.Parent.Parent.KeyFrame.Visible = false
+			script.Parent.TextBox.PlaceholderText = "Enjoy"
 			wait (0.5)
-			script.Parent.Parent.Parent.Parent.KeyFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",1,true)
+			script.Parent.Parent.Parent.KeyFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",1,true)
 			wait(0.5)
-			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = false
-			script.Parent.Parent.Parent.Parent.MainRgbFrame.Visible = true
-			script.Parent.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,0.227, 0),"Out","Sine",0.5,true)
-			if script.Parent.Parent.Parent.Parent.MainRgbFrame.MainContainer.SettinsFrame.soundbutton.Text == "False" then
+			script.Parent.Parent.Parent.MainRgbFrame.Visible = true
+			script.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,0.227, 0),"Out","Sine",0.5,true)
+			if script.Parent.Parent.Parent.MainRgbFrame.MainContainer.SettinsFrame.soundbutton.Text == "False" then
 			startups:Play()	
 			else
 			startups:Destroy()
 			end
 		elseif readfile("Astra Hub/Key.txt") ~= "" then
-			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = true
+			script.Parent.Parent.Parent.KeyFrame.Visible = true
 			game.StarterGui:SetCore("SendNotification", {
 				Title = "Astra Hub";
 				Text = "Key updated or something went wrong";
@@ -3942,24 +3944,24 @@ local function URRLKM_fake_script() -- TextBox.textboxscript
 			})
 		else
 			warn("[Astra Hub]: "..identifyexecutor().." isn't supported")
-			script.Parent.Parent.Parent.Parent.KeyFrame.Visible = true
+			script.Parent.Parent.Parent.KeyFrame.Visible = true
 		end
 	end
 	
 	local function onFocusLost(enterPressed, inputObject)
 		if enterPressed then
-			local guess = script.Parent.Text
-			if guess == Response.Body then
-				writefile("Astra Hub/Key.txt", guess)
-				script.Parent.Text = ""
-				script.Parent.PlaceholderText = "Enjoy"
+			if request and writefile then
+				if script.Parent.TextBox.Text == Response.Body then
+				writefile("Astra Hub/Key.txt", script.Parent.TextBox.Text)
+				script.Parent.TextBox.Text = ""
+				script.Parent.TextBox.PlaceholderText = "Enjoy"
 				wait (0.5)
-				script.Parent.Parent.Parent.Parent.KeyFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",1,true)
+				script.Parent.Parent.Parent.KeyFrame:TweenPosition(UDim2.new(0.264, 0,-1.227, 0),"Out","Sine",1,true)
 				wait(0.5)
-				script.Parent.Parent.Parent.Parent.KeyFrame.Visible = false
-				script.Parent.Parent.Parent.Parent.MainRgbFrame.Visible = true
-				script.Parent.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,0.227, 0),"Out","Sine",0.5,true)
-				if script.Parent.Parent.Parent.Parent.MainRgbFrame.MainContainer.SettinsFrame.soundbutton.Text == "False" then
+				script.Parent.Parent.Parent.KeyFrame.Visible = false
+				script.Parent.Parent.Parent.MainRgbFrame.Visible = true
+				script.Parent.Parent.Parent.MainRgbFrame:TweenPosition(UDim2.new(0.264, 0,0.227, 0),"Out","Sine",0.5,true)
+				if script.Parent.Parent.Parent.MainRgbFrame.MainContainer.SettinsFrame.soundbutton.Text == "False" then
 						startups:Play()	
 				else
 					startups:Destroy()
@@ -3970,11 +3972,12 @@ local function URRLKM_fake_script() -- TextBox.textboxscript
 					Text = "Wrong Key, Check our discord server for a new Key";
 					Duration = "10";
 				})
-				script.Parent.Text = ""
-				script.Parent.PlaceholderText = "Insert Key"
+				script.Parent.TextBox.Text = ""
+				script.Parent.TextBox.PlaceholderText = "Insert Key"
+				end
 			end
 		end
-		end
-	script.Parent.FocusLost:Connect(onFocusLost)
+	end
+	script.Parent.TextBox.FocusLost:Connect(onFocusLost)
 end
-coroutine.wrap(URRLKM_fake_script)()
+coroutine.wrap(OMHTLG_fake_script)()
